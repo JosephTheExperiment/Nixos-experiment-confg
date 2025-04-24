@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/monitor.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -28,11 +29,14 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
+  
+  # Console
+  console = {
+    font = "fira-code";
+    enable = true;
+    keyMap = "us";
+    useXkbConfig = true; # use xkb.options in tty.
+  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -63,6 +67,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.joseph = {
+    name = "Joseph";
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
