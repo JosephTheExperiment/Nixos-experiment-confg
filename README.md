@@ -1,1 +1,1 @@
-# Nixos-experiment confg
+# Nixos-confg
