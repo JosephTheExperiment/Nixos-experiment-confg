@@ -7,7 +7,6 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./modules/nix-alien.nix 
       ./modules/monitor.nix
       ./hardware-configuration.nix
     ];
@@ -115,6 +114,8 @@
     gitFull
     git-credential-manager
   ];
+
+  programs.nix-ld.enable = true;
 
   programs.neovim = {
     enable = true;
