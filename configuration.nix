@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      ./modules/nix-alien.nix 
       ./modules/monitor.nix
       ./hardware-configuration.nix
     ];
@@ -99,18 +100,20 @@
     ];
   };
 
+  # Enable the Flakes feature and the accompanying new nix command-line tool
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    nix-ld
     brave
     toybox
     gitFull
-    gh
     git-credential-manager
-    git-credential-oauth
   ];
 
   programs.neovim = {
