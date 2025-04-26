@@ -2,14 +2,21 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, unstable-pkgs ? import <nixpkgs-unstable> { }, ... }:
+{ config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./modules/monitor.nix
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./modules/monitor.nix
+    ./hardware-configuration.nix
+  ];
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      packageOverrides = pkgs: {
+      unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {};
+    };
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -87,7 +94,7 @@
     description = "Joseph";
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
-      unstable-pkgs.zed-editor
+      unstable.zed-editor
       inkscape
       vscode
       obsidian
