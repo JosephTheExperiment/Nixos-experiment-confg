@@ -42,6 +42,10 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
+   
+  environment.variables = {
+    GCM_CREDENTIAL_STORE = "secretservice";
+  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -108,6 +112,7 @@
     toybox
     gitFull
     git-credential-manager
+    git-credential-oauth
   ];
 
   programs.neovim = {
