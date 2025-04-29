@@ -49,7 +49,7 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-   
+
   environment.variables = {
     GCM_CREDENTIAL_STORE = "secretservice";
   };
@@ -96,15 +96,16 @@
     packages = with pkgs; [
       unstable.zed-editor
       inkscape
-      vscode
       obsidian
       rustc
-      cargo 
-      cmake 
+      cargo
+      rust-analyzer
+      cmake
       conan
       vcpkg
       gcc
-      gnumake 
+      gnumake
+      clang-tools
     ];
   };
 
@@ -113,7 +114,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  
+
   environment.systemPackages = with pkgs; [
     appimage-run
     brave
@@ -132,7 +133,7 @@
     fira-code
     fira-code-symbols
   ];
- 
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
