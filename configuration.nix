@@ -115,8 +115,11 @@
         neovim
     ];
     
-    programs.nix-ld.enable = true;
-    programs.nix-ld.libraries = with pkgs; [];
+    programs.nix-ld = {
+        enable = true;
+        package = pkgs.nix-ld;
+        libraries = with pkgs; [];
+    };
     
     programs.git = {
         enable = true;
