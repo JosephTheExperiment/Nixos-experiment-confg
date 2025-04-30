@@ -117,11 +117,6 @@
     neovim
   ];
   
-  programs.nix-ld = {
-    enable = true;
-    package = pkgs.nix-ld;
-  };
-  
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
