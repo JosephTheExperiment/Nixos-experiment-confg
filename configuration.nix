@@ -77,13 +77,13 @@
     description = "Joseph";
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
-      # Gui apps
+      # Unstable apps
       unstable.zed-editor
+      unstable.gearlever
+      
+      # Apps
       inkscape
       obsidian
-      
-      # Utilities
-      nixd
       
       # Rust
       rustc
@@ -97,6 +97,9 @@
       gcc
       gnumake
       clang-tools
+      
+      # Utilities
+      nixd
     ];
   };
 
@@ -108,13 +111,15 @@
 
   # System wide packages
   environment.systemPackages = with pkgs; [
-    appimage-run
-    steam-run
     brave
     toybox
     git-credential-manager
     neovim
   ];
+  
+  # enable appimage support
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
   
   # Steam (it just works)
   programs.steam.enable = true;
