@@ -7,7 +7,6 @@
 {
   imports = [
     ./modules/monitor.nix
-    ./modules/nix-alien.nix
     ./hardware-configuration.nix
   ];
 
