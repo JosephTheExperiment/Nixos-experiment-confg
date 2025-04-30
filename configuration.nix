@@ -110,6 +110,7 @@
 
   environment.systemPackages = with pkgs; [
     appimage-run
+    nix-ld
     brave
     toybox
     git-credential-manager
@@ -119,7 +120,9 @@
   programs.nix-ld = {
     enable = true;
     package = pkgs.nix-ld;
-    libraries = with pkgs; [];
+    libraries = with pkgs; [
+      glibc
+    ];
   };
   
   programs.git = {
