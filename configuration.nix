@@ -7,6 +7,7 @@
 {
   imports = [
     ./modules/monitor.nix
+    ./modules/nix-alien.nix
     ./hardware-configuration.nix
   ];
 
@@ -109,7 +110,7 @@
   # System wide packages
   environment.systemPackages = with pkgs; [
     appimage-run
-    nix-ld
+    steam-run
     brave
     toybox
     git-credential-manager
