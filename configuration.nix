@@ -116,6 +116,9 @@
     neovim
   ];
   
+  # Steam (it just works)
+  programs.steam.enable = true;
+  
   # Git config
   programs.git = {
     enable = true;
