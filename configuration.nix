@@ -69,16 +69,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.joseph = {
@@ -86,19 +77,26 @@
     description = "Joseph";
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
+      # Gui apps
       unstable.zed-editor
       inkscape
       obsidian
+      
+      # Utilities
+      nixd
+      
+      # Rust
       rustc
       cargo
       rust-analyzer
+      
+      # C/C++
       cmake
       conan
       vcpkg
       gcc
       gnumake
       clang-tools
-      nixd
     ];
   };
 
@@ -108,6 +106,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # System wide packages
   environment.systemPackages = with pkgs; [
     appimage-run
     nix-ld
@@ -117,6 +116,7 @@
     neovim
   ];
   
+  # Git config
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
@@ -131,7 +131,8 @@
 	    };
     };
   };
-
+  
+  # Fonts
   fonts.packages = with pkgs; [
     fira-code
     fira-code-symbols
