@@ -128,7 +128,7 @@
             };
             credential = {
 	            helper = "manager";
-				store = "libsecret";
+				credentialStore = "secretservice";
 	        };
         };
     };
