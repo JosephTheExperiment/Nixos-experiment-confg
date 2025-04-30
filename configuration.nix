@@ -114,7 +114,10 @@
         git-credential-manager
         neovim
     ];
-
+    
+    programs.nix-ld.enable = true;
+    programs.nix-ld.libraries = with pkgs; [];
+    
     programs.git = {
         enable = true;
         package = pkgs.gitFull;
