@@ -1,8 +1,5 @@
-{ config, pkgs, inputs, ... }:
-let 
-  stable-pkgs = inputs.nixpkgs.legacyPackages.${pkgs.system};
-  unstable-pkgs = inputs.unstable.legacyPackages.${pkgs.system};
-in
+{ config, pkgs, stable-pkgs, unstable-pkgs, ... }:
+
 {
   imports = [
     ./modules/monitor.nix
@@ -120,7 +117,7 @@ in
   # Git config
   programs.git = {
     enable = true;
-    package = pkgs.gitFull;
+    package = stable-pkgs.gitFull;
     config = {
       user = {
         name = "JosephTheExperiment";
