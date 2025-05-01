@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 let 
-  nixpkgs = inputs.nixpkgs.legacyPackages.${pkgs.system};
-  unstable = inputs.unstable.legacyPackages.${pkgs.system};
+  stable-pkgs = inputs.nixpkgs.legacyPackages.${pkgs.system};
+  unstable-pkgs = inputs.unstable.legacyPackages.${pkgs.system};
 in
 {
   imports = [
@@ -69,7 +69,7 @@ in
     isNormalUser = true;
     description = "Joseph";
     extraGroups = [ "wheel" "networkmanager" ];
-    packages = with nixpkgs; [
+    packages = with stable-pkgs; [
       # Apps
       inkscape
       obsidian
@@ -91,8 +91,8 @@ in
       nixd
     ] ++ [
       # Unstable apps
-      unstable.zed-editor
-      unstable.gearlever
+      unstable-pkgs.zed-editor
+      unstable-pkgs.gearlever
     ];
   };
 
@@ -103,7 +103,7 @@ in
   nixpkgs.config.allowUnfree = true;
 
   # System wide packages
-  environment.systemPackages = with nixpkgs; [
+  environment.systemPackages = with stable-pkgs; [
     brave
     toybox
     git-credential-manager
@@ -134,7 +134,7 @@ in
   };
   
   # Fonts
-  fonts.packages = with nixpkgs; [
+  fonts.packages = with stable-pkgs; [
     fira-code
     fira-code-symbols
   ];
