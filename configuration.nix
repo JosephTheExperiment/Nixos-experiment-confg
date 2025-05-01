@@ -69,7 +69,7 @@
     packages = with stable-pkgs; [
       # Apps
       inkscape
-      obsidian
+      #obsidian
       
       # Rust
       rustc
