@@ -8,6 +8,12 @@ in
     ./modules/monitor.nix
     ./hardware-configuration.nix
   ];
+ 
+  # Enable the Flakes feature and the accompanying new nix command-line tool
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -95,12 +101,6 @@ in
       unstable-pkgs.gearlever
     ];
   };
-
-  # Enable the Flakes feature and the accompanying new nix command-line tool
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # System wide packages
   environment.systemPackages = with stable-pkgs; [
