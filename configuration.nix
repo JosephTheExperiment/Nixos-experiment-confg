@@ -86,10 +86,6 @@
       
       # Utilities
       nixd
-    ] ++ [
-      # Unstable apps
-      unstable-pkgs.zed-editor
-      unstable-pkgs.gearlever
     ];
   };
 
