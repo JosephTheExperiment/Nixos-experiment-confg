@@ -1,4 +1,4 @@
-{ config, pkgs, stable-pkgs, unstable-pkgs, ... }:
+{ stable-pkgs, unstable-pkgs, ... }:
 
 {
   imports = [
@@ -86,6 +86,10 @@
       
       # Utilities
       nixd
+    ] ++ [
+      # Unstable apps
+      unstable-pkgs.zed-editor
+      unstable-pkgs.gearlever
     ];
   };
 
