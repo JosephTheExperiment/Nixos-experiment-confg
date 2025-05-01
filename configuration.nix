@@ -1,18 +1,13 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, inputs, ... }:
+let 
+  nixpkgs = inputs.nixpkgs.legacyPackages.${pkgs.system};
+  unstable = inputs.unstable.legacyPackages.${pkgs.system};
+in
 {
   imports = [
     ./modules/monitor.nix
     ./hardware-configuration.nix
   ];
-
-  nixpkgs = {
-    config = {
-      packageOverrides = pkgs: {
-        unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {};
-      };
-    };
-  };
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -74,11 +69,7 @@
     isNormalUser = true;
     description = "Joseph";
     extraGroups = [ "wheel" "networkmanager" ];
-    packages = with pkgs; [
-      # Unstable apps
-      unstable.zed-editor
-      unstable.gearlever
-      
+    packages = with nixpkgs; [
       # Apps
       inkscape
       obsidian
@@ -98,6 +89,10 @@
       
       # Utilities
       nixd
+    ] ++ [
+      # Unstable apps
+      unstable.zed-editor
+      unstable.gearlever
     ];
   };
 
@@ -108,7 +103,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # System wide packages
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with nixpkgs; [
     brave
     toybox
     git-credential-manager
@@ -139,7 +134,7 @@
   };
   
   # Fonts
-  fonts.packages = with pkgs; [
+  fonts.packages = with nixpkgs; [
     fira-code
     fira-code-symbols
   ];
