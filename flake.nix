@@ -8,7 +8,7 @@
   let 
     system = "x86_64-linux";
     stable-pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-    unstable-pkgs = unstable.legacyPackages.${system};
+    unstable-pkgs = import unstable { inherit system; config.allowUnfree = true; };
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
