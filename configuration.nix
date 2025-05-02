@@ -1,8 +1,5 @@
-{ pkgs, inputs, ... }:
-let
-  system = "x86_64-linux";
-  pkgs-unstable = import inputs.unstable { inherit system; config.allowUnfree = true; };
-in 
+{ pkgs, pkgs-unstable, ... }:
+
 {
   imports = [
     ./modules/monitor.nix
@@ -90,6 +87,7 @@ in
       
       # Utilities
       nixd
+      nixfmt-classic
     ] ++ [
       # Unstable apps
       pkgs-unstable.gearlever
@@ -125,11 +123,11 @@ in
     config = {
       user = {
         name = "JosephTheExperiment";
-	email = "yousef.hisham444@proton.me";
+	      email = "yousef.hisham444@proton.me";
       };
       credential = {
-	helper = "manager";
-	credentialStore = "secretservice";
+	      helper = "manager";
+	      credentialStore = "secretservice";
       };
     };
   };
