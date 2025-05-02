@@ -1,5 +1,8 @@
-{ stable-pkgs, unstable-pkgs, ... }:
-
+{ pkgs, inputs, ... }:
+let
+  system = "x86_64-linux";
+  pkgs-unstable = import inputs.unstable { inherit system; config.allowUnfree = true; };
+in 
 {
   imports = [
     ./modules/monitor.nix
@@ -66,7 +69,7 @@
     isNormalUser = true;
     description = "Joseph";
     extraGroups = [ "wheel" "networkmanager" ];
-    packages = with stable-pkgs; [
+    packages = with pkgs; [
       # Apps
       inkscape
       obsidian
@@ -89,7 +92,7 @@
       nixd
     ] ++ [
       # Unstable apps
-      unstable-pkgs.gearlever
+      pkgs-unstable.gearlever
     ];
   };
 
@@ -100,7 +103,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # System wide packages
-  environment.systemPackages = with stable-pkgs; [
+  environment.systemPackages = with pkgs; [
     brave
     toybox
     git-credential-manager
@@ -117,7 +120,7 @@
   # Git config
   programs.git = {
     enable = true;
-    package = stable-pkgs.gitFull;
+    package = pkgs.gitFull;
     config = {
       user = {
         name = "JosephTheExperiment";
@@ -131,7 +134,7 @@
   };
   
   # Fonts
-  fonts.packages = with stable-pkgs; [
+  fonts.packages = with pkgs; [
     fira-code
     fira-code-symbols
   ];
