@@ -39,7 +39,6 @@
   
   # Set video drivers
   services.xserver.videoDrivers = [ "ati" "amdgpu" ];
-  hardware.amdgpu.amdvlk.enable = true;
 
   # Enable the GNOME Desktop Environment
   services.xserver.displayManager.gdm.enable = true;
@@ -71,6 +70,7 @@
       # Apps
       inkscape
       obsidian
+      vscode
       
       # Rust
       rustc
@@ -89,7 +89,6 @@
       nixd
     ] ++ [
       # Unstable apps
-      unstable-pkgs.zed-editor
       unstable-pkgs.gearlever
     ];
   };
