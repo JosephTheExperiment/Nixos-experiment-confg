@@ -39,6 +39,7 @@
   
   # Set video drivers
   services.xserver.videoDrivers = [ "ati" "amdgpu" ];
+  hardware.amdgpu.amdvlk.enable = true;
 
   # Enable the GNOME Desktop Environment
   services.xserver.displayManager.gdm.enable = true;
@@ -121,12 +122,12 @@
     config = {
       user = {
         name = "JosephTheExperiment";
-	      email = "yousef.hisham444@proton.me";
+	email = "yousef.hisham444@proton.me";
       };
       credential = {
-	      helper = "manager";
-				credentialStore = "secretservice";
-	    };
+	helper = "manager";
+	credentialStore = "secretservice";
+      };
     };
   };
   
