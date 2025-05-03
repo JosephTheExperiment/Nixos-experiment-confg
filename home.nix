@@ -3,7 +3,7 @@
 {
   home.username = "joseph";
   home.homeDirectory = "/home/joseph";
-  home.stateVersion = "24.05"; # Don't change this.
+  home.stateVersion = "23.05"; # Don't change this.
 
   home.packages = [ ];
 
