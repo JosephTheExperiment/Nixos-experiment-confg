@@ -63,33 +63,6 @@
     isNormalUser = true;
     description = "Joseph";
     extraGroups = [ "wheel" "networkmanager" ];
-    packages = with pkgs;
-      [
-        # Apps
-        inkscape
-        obsidian
-        vscode
-
-        # Rust
-        rustc
-        cargo
-        rust-analyzer
-
-        # C/C++
-        cmake
-        conan
-        vcpkg
-        gcc
-        gnumake
-        clang-tools
-
-        # Utilities
-        nixd
-        nixfmt-classic
-      ] ++ [
-        # Unstable apps
-        pkgs-unstable.gearlever
-      ];
   };
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
@@ -99,12 +72,13 @@
   nixpkgs.config.allowUnfree = true;
 
   # System wide packages
-  environment.systemPackages = with pkgs; [
-    brave
-    toybox
-    git-credential-manager
-    neovim
-    home-manager
+  environment.systemPackages = [
+    pkgs.brave
+    pkgs.toybox
+    pkgs.git-credential-manager
+    pkgs.neovim
+    pkgs.home-manager
+    pkgs.bottles
   ];
 
   # enable appimage support
@@ -113,25 +87,10 @@
 
   # Steam (it just works)
   programs.steam.enable = true;
-
-  # Git config
-  programs.git = {
-    enable = true;
-    package = pkgs.gitFull;
-    config = {
-      user = {
-        name = "JosephTheExperiment";
-        email = "yousef.hisham444@proton.me";
-      };
-      credential = {
-        helper = "manager";
-        credentialStore = "secretservice";
-      };
-    };
-  };
+  programs.gamemode.enable = true;
 
   # Fonts
-  fonts.packages = with pkgs; [ fira-code fira-code-symbols ];
+  fonts.packages = [ pkgs.fira-code pkgs.fira-code-symbols ];
 
   system.stateVersion = "24.11"; # Did you read the comment?
 }
