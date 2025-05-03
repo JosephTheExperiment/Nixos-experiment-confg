@@ -104,6 +104,7 @@
     toybox
     git-credential-manager
     neovim
+    home-manager
   ];
 
   # enable appimage support
