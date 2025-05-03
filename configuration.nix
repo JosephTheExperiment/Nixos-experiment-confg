@@ -1,17 +1,14 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
-  imports = [
-    ./modules/monitor.nix
-    ./hardware-configuration.nix
-  ];
+  imports = [ ./modules/monitor.nix ./hardware-configuration.nix ];
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Hostname
-  networking.hostName = "nixos"; 
+  networking.hostName = "nixos";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -36,7 +33,7 @@
 
   # Enable the X11 windowing system
   services.xserver.enable = true;
-  
+
   # Set video drivers
   services.xserver.videoDrivers = [ "ati" "amdgpu" ];
 
@@ -66,32 +63,33 @@
     isNormalUser = true;
     description = "Joseph";
     extraGroups = [ "wheel" "networkmanager" ];
-    packages = with pkgs; [
-      # Apps
-      inkscape
-      obsidian
-      vscode
-      
-      # Rust
-      rustc
-      cargo
-      rust-analyzer
-      
-      # C/C++
-      cmake
-      conan
-      vcpkg
-      gcc
-      gnumake
-      clang-tools
-      
-      # Utilities
-      nixd
-      nixfmt-classic
-    ] ++ [
-      # Unstable apps
-      pkgs-unstable.gearlever
-    ];
+    packages = with pkgs;
+      [
+        # Apps
+        inkscape
+        obsidian
+        vscode
+
+        # Rust
+        rustc
+        cargo
+        rust-analyzer
+
+        # C/C++
+        cmake
+        conan
+        vcpkg
+        gcc
+        gnumake
+        clang-tools
+
+        # Utilities
+        nixd
+        nixfmt-classic
+      ] ++ [
+        # Unstable apps
+        pkgs-unstable.gearlever
+      ];
   };
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
@@ -106,16 +104,15 @@
     toybox
     git-credential-manager
     neovim
-    home-manager
   ];
-  
+
   # enable appimage support
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
-  
+
   # Steam (it just works)
   programs.steam.enable = true;
-  
+
   # Git config
   programs.git = {
     enable = true;
@@ -123,20 +120,17 @@
     config = {
       user = {
         name = "JosephTheExperiment";
-	      email = "yousef.hisham444@proton.me";
+        email = "yousef.hisham444@proton.me";
       };
       credential = {
-	      helper = "manager";
-	      credentialStore = "secretservice";
+        helper = "manager";
+        credentialStore = "secretservice";
       };
     };
   };
-  
+
   # Fonts
-  fonts.packages = with pkgs; [
-    fira-code
-    fira-code-symbols
-  ];
+  fonts.packages = with pkgs; [ fira-code fira-code-symbols ];
 
   system.stateVersion = "24.11"; # Did you read the comment?
 }
