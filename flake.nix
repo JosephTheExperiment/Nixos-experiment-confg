@@ -15,10 +15,7 @@
         inherit system;
         config.allowUnfree = true;
       };
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
+      pkgs = nixpkgs.legacyPackages.${system};
     in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
