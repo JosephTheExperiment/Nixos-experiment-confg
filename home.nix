@@ -35,9 +35,7 @@
   home.file = { };
 
   home.sessionVariables = { };
-
-  nixpkgs.config.allowUnfree = true;
-
+  
   # Git config
   programs.git = {
     enable = true;

@@ -68,9 +68,6 @@
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   # System wide packages
   environment.systemPackages = [
     pkgs.brave
@@ -92,5 +89,5 @@
   # Fonts
   fonts.packages = [ pkgs.fira-code pkgs.fira-code-symbols ];
 
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "24.11"; # No touchy
 }
