@@ -28,6 +28,7 @@
     pkgs.clang-tools
 
     # Utilities
+    pkgs.python3Minimal
     pkgs.nixfmt-classic
     pkgs.nixd
   ];
