@@ -19,10 +19,16 @@ read actionNumber
 
 echo ""
 if [ $actionNumber -eq 1 ]; then 
+  echo "Nixos-rebuild switch:"
   sudo nixos-rebuild switch --flake /home/joseph/Nixos-config/
 elif [ $actionNumber -eq 2 ]; then 
+  echo "Home mangaer switch:"
   home-manager switch --flake /home/joseph/Nixos-config/
 elif [ $actionNumber -eq 3 ]; then
+  echo "Nixos-rebuild switch:"
   sudo nixos-rebuild switch --flake /home/joseph/Nixos-config/
+  
+  echo ""
+  echo "Home mangaer switch:"
   home-manager switch --flake /home/joseph/Nixos-config/
 fi
