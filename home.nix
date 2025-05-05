@@ -44,7 +44,7 @@
     userName = "JosephTheExperiment";
     extraConfig = {
       credential = {
-        helper = "oauth";
+        helper = "manager";
         credentialStore = "secretservice";
       };
     };
