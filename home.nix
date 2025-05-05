@@ -28,7 +28,6 @@
     pkgs.clang-tools
 
     # Utilities
-    pkgs.python3Minimal
     pkgs.nixfmt-classic
     pkgs.nixd
   ];
@@ -45,7 +44,7 @@
     userName = "JosephTheExperiment";
     extraConfig = {
       credential = {
-        helper = "manager";
+        helper = "cache";
         credentialStore = "secretservice";
       };
     };
