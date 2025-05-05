@@ -1,6 +1,7 @@
 #! /usr/bin/env nix-shell
 #! nix-shell -i bash -p bash
 set -e
+flake=/home/joseph/Nixos-config/
 
 git add .
 echo "Git commit massage:"
@@ -20,15 +21,15 @@ read actionNumber
 echo ""
 if [ $actionNumber -eq 1 ]; then 
   echo "Nixos-rebuild switch:"
-  sudo nixos-rebuild switch --flake /home/joseph/Nixos-config/
+  sudo nixos-rebuild switch --flake $flake
 elif [ $actionNumber -eq 2 ]; then 
   echo "Home mangaer switch:"
-  home-manager switch --flake /home/joseph/Nixos-config/
+  home-manager switch --flake $flake
 elif [ $actionNumber -eq 3 ]; then
   echo "Nixos-rebuild switch:"
-  sudo nixos-rebuild switch --flake /home/joseph/Nixos-config/
+  sudo nixos-rebuild switch --flake $flake
   
   echo ""
   echo "Home mangaer switch:"
-  home-manager switch --flake /home/joseph/Nixos-config/
+  home-manager switch --flake $flake
 fi
