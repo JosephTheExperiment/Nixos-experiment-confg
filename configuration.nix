@@ -76,7 +76,6 @@
     pkgs.brave
     pkgs.toybox
     pkgs.git-credential-manager
-    pkgs.git-credential-oauth
     pkgs.neovim
     pkgs.home-manager
     pkgs.bottles
