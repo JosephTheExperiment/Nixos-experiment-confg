@@ -18,7 +18,7 @@ if [ $actionNumber -eq 1 ]; then
   echo ""
 
   echo "Choose system rebuild (option 3 two times) to apply the updates!"
-  ./$configPath/$0
+  $configPath/$0
 elif [ $actionNumber -eq 2 ]; then 
   echo "Delete old generations:"
   sudo nix-collect-garbage -d
