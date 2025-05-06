@@ -1,7 +1,7 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
-  imports = [ ./modules/monitor.nix ./hardware-configuration.nix ];
+  imports = [ ./modules/nixos/default.nix ./hardware-configuration.nix ];
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -68,12 +68,6 @@
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Enable opengl
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };  
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -84,17 +78,11 @@
     pkgs.git-credential-manager
     pkgs.neovim
     pkgs.home-manager
-    pkgs.bottles
   ];
 
   # enable appimage support
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
-
-  # Steam (it just works)
-  programs.steam.enable = true;
-  programs.gamemode.enable = true;
-  programs.steam.gamescopeSession.enable = true;
 
   # Fonts
   fonts.packages = [ pkgs.fira-code pkgs.fira-code-symbols ];

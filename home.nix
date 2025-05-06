@@ -1,6 +1,8 @@
 { config, pkgs, pkgs-unstable, ... }:
 
 {
+  imports = [ ./modules/home-manager/default.nix ];
+
   home.username = "joseph";
   home.homeDirectory = "/home/joseph";
   home.stateVersion = "24.05"; # Don't change this.
@@ -10,6 +12,7 @@
     pkgs.inkscape
     pkgs.obsidian
     pkgs.vscode
+    pkgs.bottles
 
     # Unstable apps
     pkgs-unstable.gearlever
@@ -40,20 +43,6 @@
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS =
       "\${HOME}/.steam/root/compatibilitytools.d";
-  };
-
-  # Git config
-  programs.git = {
-    enable = true;
-    package = pkgs.gitFull;
-    userEmail = "yousef.hisham444@proton.me";
-    userName = "JosephTheExperiment";
-    extraConfig = {
-      credential = {
-        helper = "manager";
-        credentialStore = "secretservice";
-      };
-    };
   };
 
   programs.home-manager.enable = true;
