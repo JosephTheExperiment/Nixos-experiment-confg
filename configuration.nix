@@ -68,6 +68,13 @@
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Enable opengl
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  }
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
