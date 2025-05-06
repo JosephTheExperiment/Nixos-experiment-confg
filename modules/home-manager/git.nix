@@ -3,7 +3,7 @@
 {
   home.packages = [
     pkgs.git-credential-manager
-  ]
+  ];
 
   # Git config
   programs.git = {
