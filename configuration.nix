@@ -88,6 +88,7 @@
   # Steam (it just works)
   programs.steam.enable = true;
   programs.gamemode.enable = true;
+  programs.steam.gamescopeSession.enable = true;
 
   # Fonts
   fonts.packages = [ pkgs.fira-code pkgs.fira-code-symbols ];

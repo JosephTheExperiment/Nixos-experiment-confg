@@ -27,6 +27,9 @@
     pkgs.gnumake
     pkgs.clang-tools
 
+    # Gaming
+    pkgs.protonup
+
     # Utilities
     pkgs.nixfmt-classic
     pkgs.nixd
@@ -34,8 +37,11 @@
 
   home.file = { };
 
-  home.sessionVariables = { };
-  
+  home.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+      "/${HOME}/.steam/root/compatibilitytools.d";
+  };
+
   # Git config
   programs.git = {
     enable = true;
