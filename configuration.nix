@@ -69,10 +69,8 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable opengl
-  hardware.opengl = {
-    enable = true;
-    driSupport32Bit = true;
-  };
+  hardware.opengl.enable = true;
+  hardware.graphics.enable32Bit = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
