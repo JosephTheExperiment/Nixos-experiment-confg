@@ -12,10 +12,10 @@
     pkgs.inkscape
     pkgs.obsidian
     pkgs.vscode
-    pkgs.bottles
 
     # Unstable apps
     pkgs-unstable.gearlever
+    pkgs-unstable.bottles
 
     # Rust
     pkgs.rustc

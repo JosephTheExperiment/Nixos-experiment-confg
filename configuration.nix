@@ -75,7 +75,6 @@
   environment.systemPackages = [
     pkgs.brave
     pkgs.toybox
-    pkgs.git-credential-manager
     pkgs.neovim
     pkgs.home-manager
   ];
