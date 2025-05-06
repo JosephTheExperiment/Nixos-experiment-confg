@@ -28,7 +28,7 @@
     pkgs.clang-tools
 
     # Gaming
-    pkgs.protonup
+    pkgs.protonup-ng
 
     # Utilities
     pkgs.nixfmt-classic
