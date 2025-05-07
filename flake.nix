@@ -23,7 +23,6 @@
         inherit system;
         config.allowUnfree = true;
       };
-      nixvim = inputs.nixvim.homeManagerModules.nixvim;
     in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -34,9 +33,10 @@
       homeConfigurations."joseph" =
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit pkgs-unstable nixvim; };
+          extraSpecialArgs = { inherit pkgs-unstable; };
           modules = [
-            ./home.nix 
+            ./home.nix
+            inputs.nixvim.homeManagerModules.nixvim
           ];
         };
     };

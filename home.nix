@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-unstable, nixvim, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 {
   imports = [ ./modules/home-manager/default.nix ];
