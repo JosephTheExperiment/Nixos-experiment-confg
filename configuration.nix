@@ -99,8 +99,8 @@
     pkgs.fira-code
     pkgs.fira-code-symbols
     pkgs.noto-fonts
-    pkgs.noto-fonts-cjk
-    pkgs.noto-fonts-emoji
+    pkgs.noto-fonts-cjk-sans
+    pkgs.noto-fonts-color-emoji
     pkgs.liberation_ttf
     pkgs.dejavu_fonts
     pkgs.font-awesome
