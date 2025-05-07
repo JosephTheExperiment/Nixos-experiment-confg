@@ -38,13 +38,10 @@
     desktopManager.gnome.enable = true;
     displayManager = {
       gdm.enable = true;
-      gdm.wayland = true;
+      gdm.wayland = false;
     };
   };
-
-  # Enable wayland
-  programs.hyprland.enable = true;
-
+  
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -81,23 +78,11 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
-  # Enable polkit, dconf, and xdg portal for hyprland 
-  security.polkit.enable = true;
-  programs.dconf.enable = true;
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
-    config.common.default = "*";
-  };
-
   # Fonts
   fonts.packages = [
     pkgs.fira-code
     pkgs.fira-code-symbols
     pkgs.noto-fonts
-    pkgs.noto-fonts-cjk-sans
-    pkgs.noto-fonts-color-emoji
-    pkgs.liberation_ttf
     pkgs.dejavu_fonts
     pkgs.font-awesome
   ];
