@@ -31,23 +31,22 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system
-  services.xserver.enable = true;
-
-  # Set video drivers
-  services.xserver.videoDrivers = [ "ati" "amdgpu" ];
-
   # Enable the GNOME Desktop Environment
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
-  services.displayManager.defaultSession = "hyprland-uwsm";
+  services.xserver = {
+    enable = true;
+    videoDrivers = [ "ati" "amdgpu" ];
+    displayManager = {
+      gdm.enable = true;
+      defaultSession = "hyprland";
+    };
+    xserver = {
+      desktopManager.gnome.enable = true;
+      displayManager.gdm.wayland = true;
+    };
+  };
 
   # Enable wayland
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-  };
+  programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {

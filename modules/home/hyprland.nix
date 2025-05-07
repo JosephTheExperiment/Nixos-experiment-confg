@@ -9,5 +9,6 @@
       enable = true;
       enableXdgAutostart = true;
     };
+    settings = {};
   };
 }
