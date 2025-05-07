@@ -98,12 +98,12 @@
   fonts.packages = [
     pkgs.fira-code
     pkgs.fira-code-symbols
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    liberation_ttf
-    dejavu_fonts
-    font-awesome
+    pkgs.noto-fonts
+    pkgs.noto-fonts-cjk
+    pkgs.noto-fonts-emoji
+    pkgs.liberation_ttf
+    pkgs.dejavu_fonts
+    pkgs.font-awesome
   ];
 
   system.stateVersion = "24.11"; # No touchy
