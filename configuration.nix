@@ -38,7 +38,7 @@
     desktopManager.gnome.enable = true;
     displayManager = {
       gdm.enable = true;
-      gdm.wayland = false;
+      gdm.wayland = true;
     };
   };
   

@@ -1,1 +1,6 @@
-{ imports = [ ./monitor.nix ./gaming.nix ]; }
+{
+  imports = [
+    #./monitor.nix 
+    ./gaming.nix
+  ];
+}
