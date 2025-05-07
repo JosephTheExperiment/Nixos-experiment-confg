@@ -1,7 +1,7 @@
 { config, pkgs, pkgs-unstable, ... }:
 
 {
-  imports = [ ./modules/home-manager/default.nix ];
+  imports = [ ./modules/home/default.nix ];
 
   home.username = "joseph";
   home.homeDirectory = "/home/joseph";
