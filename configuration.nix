@@ -42,7 +42,8 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   # Enable wayland
-  programs.hyprland.enable = true;
+  programs.hyprland.withUWSM = true;
+  programs.hyprland.xwayland.enable = true;
   services.xserver.displayManager.gdm.wayland = true;
 
   # Configure keymap in X11
