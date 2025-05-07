@@ -35,13 +35,11 @@
   services.xserver = {
     enable = true;
     videoDrivers = [ "ati" "amdgpu" ];
+    desktopManager.gnome.enable = true;
     displayManager = {
       gdm.enable = true;
+      gdm.wayland = true;
       defaultSession = "hyprland";
-    };
-    xserver = {
-      desktopManager.gnome.enable = true;
-      displayManager.gdm.wayland = true;
     };
   };
 
