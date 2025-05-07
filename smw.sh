@@ -25,12 +25,15 @@ elif [ $actionNumber -eq 2 ]; then
 elif [ $actionNumber -eq 3 ]; then
   echo "System rebuild:"
 
+  set +e
   git add .
   echo "Git commit massage:"
   read commitMassage
   echo ""
   git commit -m "$commitMassage"
+  set -e
   echo ""
+
 
   echo "Do you want to?"
   echo "1: Nixos rebuild switch"
