@@ -32,14 +32,16 @@
   };
 
   # Enable the GNOME Desktop Environment
-  services.xserver = {
-    enable = true;
-    videoDrivers = [ "ati" "amdgpu" ];
-    desktopManager.gnome.enable = true;
-    displayManager = {
-      gdm.enable = true;
-      gdm.wayland = true;
-      defaultSession = "hyprland";
+  services = {
+    displayManager.defaultSession = "hyprland"; 
+    xserver = {
+      enable = true;
+      videoDrivers = [ "ati" "amdgpu" ];
+      desktopManager.gnome.enable = true;
+      displayManager = {
+        gdm.enable = true;
+        gdm.wayland = true;
+      };
     };
   };
 
