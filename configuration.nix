@@ -41,6 +41,7 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.displayManager.gdm.wayland = true;
+  services.displayManager.defaultSession = "hyprland";
 
   # Enable wayland
   programs.hyprland = {
@@ -80,12 +81,30 @@
   # System wide packages
   environment.systemPackages = [ pkgs.brave pkgs.toybox pkgs.home-manager ];
 
-  # enable appimage support
+  # Enable appimage support
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
+  # Enable polkit, dconf, and xdg portal for hyprland 
+  security.polkit.enable = true;
+  programs.dconf.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    config.common.default = "*";
+  };
+
   # Fonts
-  fonts.packages = [ pkgs.fira-code pkgs.fira-code-symbols ];
+  fonts.packages = [
+    pkgs.fira-code
+    pkgs.fira-code-symbols
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    liberation_ttf
+    dejavu_fonts
+    font-awesome
+  ];
 
   system.stateVersion = "24.11"; # No touchy
 }
