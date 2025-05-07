@@ -40,6 +40,9 @@
   # Enable the GNOME Desktop Environment
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+
+  # Enable wayland
+  programs.hyprland.enable = true;
   services.xserver.displayManager.gdm.wayland = true;
 
   # Configure keymap in X11
@@ -72,11 +75,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # System wide packages
-  environment.systemPackages = [
-    pkgs.brave
-    pkgs.toybox
-    pkgs.home-manager
-  ];
+  environment.systemPackages = [ pkgs.brave pkgs.toybox pkgs.home-manager ];
 
   # enable appimage support
   programs.appimage.enable = true;
