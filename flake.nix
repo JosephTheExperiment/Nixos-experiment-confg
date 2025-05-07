@@ -6,6 +6,10 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.11"`
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -19,6 +23,7 @@
         inherit system;
         config.allowUnfree = true;
       };
+      nixvim = inputs.nixvim.homeManagerModules.nixvim;
     in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -29,8 +34,10 @@
       homeConfigurations."joseph" =
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit pkgs-unstable; };
-          modules = [ ./home.nix ];
+          extraSpecialArgs = { inherit pkgs-unstable nixvim; };
+          modules = [
+            ./home.nix 
+          ];
         };
     };
 }
