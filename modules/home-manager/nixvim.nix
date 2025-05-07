@@ -4,6 +4,7 @@
     colorschemes.dracula.enable = true;
     plugins = {
       telescope.enable = true;
+      web-devicons.enable = true;
       treesitter.enable = true;
     };
   };
