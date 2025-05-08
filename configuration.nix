@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pc, pkgs, pkgs-unstable, ... }:
 
 {
   # Bootloader
@@ -6,7 +6,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Hostname
-  networking.hostName = "nixos";
+  networking.hostName = pc.host;
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -57,7 +57,7 @@
   };
 
   # Define a user account
-  users.users.joseph = {
+  users.users.${pc.user} = {
     isNormalUser = true;
     description = "Joseph";
     extraGroups = [ "wheel" "networkmanager" ];
@@ -70,7 +70,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # System wide packages
-  environment.systemPackages = [ pkgs.brave pkgs.toybox pkgs.home-manager ];
+  environment.systemPackages = [ pkgs.brave pkgs.busybox pkgs.home-manager ];
 
   # Enable appimage support
   programs.appimage.enable = true;

@@ -30,7 +30,7 @@
     in {
       nixosConfigurations.${pc.host} = nixpkgs.lib.nixosSystem {
         system = pc.system;
-        specialArgs = { inherit pkgs-unstable; };
+        specialArgs = { inherit pkgs-unstable pc; };
         modules = [
           ./configuration.nix
           ./hardware-configuration.nix
@@ -41,7 +41,7 @@
       homeConfigurations.${pc.user} =
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit pkgs-unstable; };
+          extraSpecialArgs = { inherit pkgs-unstable pc; };
           modules = [
             ./home.nix
             inputs.nixvim.homeManagerModules.nixvim
