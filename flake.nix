@@ -14,29 +14,31 @@
 
   outputs = { self, nixpkgs, ... }@inputs:
     let
-      system = "x86_64-linux";
-      user = "joseph";
-      host = "nixos";
+      pc = {
+        system = "x86_64-linux";
+        user = "joseph";
+        host = "nixos";
+      };
       pkgs = import nixpkgs {
-        inherit system;
+        inherit pc.system;
         config.allowUnfree = true;
       };
       pkgs-unstable = import inputs.nixpkgs-unstable {
-        inherit system;
+        inherit pc.system;
         config.allowUnfree = true;
       };
     in {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        inherit system;
+      nixosConfigurations.${pc.host} = nixpkgs.lib.nixosSystem {
+        inherit pc.system;
         specialArgs = { inherit pkgs-unstable; };
-        modules = [ 
+        modules = [
           ./configuration.nix
           ./hardware-configuration.nix
           ./modules/nixos/default.nix
         ];
       };
 
-      homeConfigurations."joseph" =
+      homeConfigurations.${pc.user} =
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = { inherit pkgs-unstable; };
