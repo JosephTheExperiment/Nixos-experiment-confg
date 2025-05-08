@@ -37,6 +37,7 @@
           modules = [
             ./home.nix
             inputs.nixvim.homeManagerModules.nixvim
+            ./modules/home/default.nix
           ];
         };
     };

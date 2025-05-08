@@ -1,8 +1,6 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
-  imports = [ ./modules/home/default.nix ];
-
   home.username = "joseph";
   home.homeDirectory = "/home/joseph";
   home.stateVersion = "24.05"; # Don't change this.
