@@ -3,9 +3,6 @@
     enable = true;
     package = pkgs-unstable.nh;
     flake = "/home/joseph/Nixos-config";
-    clean = {
-      enable = true;
-      extraArgs = "--keep 5";
-    };
+    clean.enable = true;
   };
 }
