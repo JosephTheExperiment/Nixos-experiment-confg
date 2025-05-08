@@ -20,16 +20,16 @@
         host = "nixos";
       };
       pkgs = import nixpkgs {
-        inherit ${pc.system};
+        system = pc.system;
         config.allowUnfree = true;
       };
       pkgs-unstable = import inputs.nixpkgs-unstable {
-        inherit ${pc.system};
+        system = pc.system;
         config.allowUnfree = true;
       };
     in {
       nixosConfigurations.${pc.host} = nixpkgs.lib.nixosSystem {
-        inherit ${pc.system};
+        system = pc.system;
         specialArgs = { inherit pkgs-unstable; };
         modules = [
           ./configuration.nix
