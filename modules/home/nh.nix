@@ -1,8 +1,8 @@
 { pkgs-unstable, ... }: {
   programs.nh = {
     enable = true;
-    flake = "/home/joseph/Nixos-config";
     package = pkgs-unstable.nh;
+    flake = "/home/joseph/Nixos-config";
     clean = {
       enable = true;
       dates = "weekly";
