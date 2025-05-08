@@ -15,6 +15,8 @@
   outputs = { self, nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
+      user = "joseph";
+      host = "nixos";
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;

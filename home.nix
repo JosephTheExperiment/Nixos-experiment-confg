@@ -31,7 +31,8 @@
     # Gaming
     pkgs.protonup-ng
 
-    # Utilities
+    # Nix utilities
+    manix
     pkgs.nixfmt-classic
     pkgs.nixd
   ];
