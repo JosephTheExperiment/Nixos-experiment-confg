@@ -32,7 +32,7 @@
     pkgs.protonup-ng
 
     # Nix utilities
-    manix
+    pkgs.manix
     pkgs.nixfmt-classic
     pkgs.nixd
   ];
