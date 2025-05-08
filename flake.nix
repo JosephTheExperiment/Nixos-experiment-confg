@@ -27,7 +27,11 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit pkgs-unstable; };
-        modules = [ ./configuration.nix ];
+        modules = [ 
+          ./configuration.nix
+          ./hardware-configuration.nix
+          ./modules/nixos/default.nix
+        ];
       };
 
       homeConfigurations."joseph" =

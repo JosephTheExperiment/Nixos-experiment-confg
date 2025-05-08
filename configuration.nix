@@ -1,8 +1,6 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
-  imports = [ ./modules/nixos/default.nix ./hardware-configuration.nix ];
-
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
