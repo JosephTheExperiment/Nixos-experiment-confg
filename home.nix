@@ -28,18 +28,10 @@
     pkgs.gnumake
     pkgs.clang-tools
 
-    # Gaming
-    pkgs.protonup-ng
-
     # Nix utilities
     pkgs.nixfmt-classic
     pkgs.nixd
   ];
-
-  home.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
-      "\${HOME}/.steam/root/compatibilitytools.d";
-  };
 
   programs.home-manager.enable = true;
 }
