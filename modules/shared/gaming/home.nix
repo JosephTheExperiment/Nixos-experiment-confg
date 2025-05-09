@@ -2,7 +2,7 @@
   home.packages = [
     pkgs.mangohud
     pkgs.protonup-ng
-    heroic
+    pkgs.heroic
   ];
 
   home.sessionVariables = {

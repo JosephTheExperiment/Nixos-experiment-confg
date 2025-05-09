@@ -5,7 +5,7 @@
     enable32Bit = true;
   };
 
-  # Steam (it just works)
+  # Options for games
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 }
