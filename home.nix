@@ -15,19 +15,6 @@
     pkgs-unstable.gearlever
     pkgs-unstable.bottles
 
-    # Rust
-    pkgs.rustc
-    pkgs.cargo
-    pkgs.rust-analyzer
-
-    # C/C++
-    pkgs.cmake
-    pkgs.conan
-    pkgs.vcpkg
-    pkgs.gcc
-    pkgs.gnumake
-    pkgs.clang-tools
-
     # Nix utilities
     pkgs.nixfmt-classic
     pkgs.nixd
