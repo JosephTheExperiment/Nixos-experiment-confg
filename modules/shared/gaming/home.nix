@@ -1,7 +1,8 @@
 { pkgs, ... }: {
   home.packages = [
-    pkgs.lutris
+    pkgs.mangohud
     pkgs.protonup-ng
+    heroic
   ];
 
   home.sessionVariables = {
