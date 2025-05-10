@@ -1,5 +1,5 @@
 { pkgs, pkgs-unstable, ... }: {
-  users.defaultUserShell = pkgs.zsh;
+  home.shell.enableZshIntegration = true;
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -18,7 +18,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "thefuck" ];
-      theme = "robbyrussell";
+      theme = "gnzh";
     };
   };
 }
