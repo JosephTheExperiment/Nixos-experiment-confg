@@ -67,7 +67,7 @@
   # Enable zsh and set it as the default shell 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
-  console.font = "Fira Code";
+  console.font = "Fira-Code";
 
   # Fonts
   fonts.packages = [
