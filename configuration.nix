@@ -67,7 +67,7 @@
   # Enable zsh and set console font 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
-  console.font = "FiraCode";
+  console.font = "1i9bfxblx568wsjq7ks1kyyfn9k36i4r2an4n45mb46swc94n8n0";
 
   # Fonts
   fonts.packages = [
