@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }: {
+{ config, pkgs, pkgs-unstable, ... }: {
   home.shell.enableZshIntegration = true;
   programs.zsh = {
     enable = true;
