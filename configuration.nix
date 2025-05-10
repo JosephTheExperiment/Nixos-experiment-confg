@@ -68,7 +68,7 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   console = {
-    font = "Fira_Code";
+    font = "FiraCode";
     packages = [ pkgs.fira-code ];
   };
 
