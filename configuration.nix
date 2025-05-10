@@ -64,10 +64,13 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
-  # Enable zsh and set it as the default shell 
+  # Enable zsh and set console font 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
-  console.font = "Fira-Code";
+  console = {
+    font = "fira-code";
+    packages = pkgs.fira-code;
+  };
 
   # Fonts
   fonts.packages = [
