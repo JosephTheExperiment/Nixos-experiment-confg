@@ -1,6 +1,4 @@
-{ pc, pkgs, pkgs-unstable, ... }:
-
-{
+{ pc, pkgs, pkgs-unstable, ... }: {
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -64,7 +62,7 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
-  # Enable zsh and set console font 
+  # Enable zsh
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
