@@ -6,7 +6,7 @@
     font = {
       package = pkgs.fira-code;
       name = "Fira Code";
-      size = "13";
+      size = 13;
     };
   };
 }
