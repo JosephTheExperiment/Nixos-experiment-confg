@@ -27,7 +27,7 @@
       gdm.wayland = false;
     };
   };
-  
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -69,7 +69,7 @@
   users.defaultUserShell = pkgs.zsh;
   console = {
     font = "fira-code";
-    packages = pkgs.fira-code;
+    packages = [ pkgs.fira-code ];
   };
 
   # Fonts
