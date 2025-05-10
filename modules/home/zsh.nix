@@ -1,4 +1,5 @@
-{ config, pkgs, pkgs-unstable, ... }: {
+{ pkgs, pkgs-unstable, ... }: {
+  home.packages = [ pkgs.thefuck ];
   programs.zsh = {
     enable = true;
     enableCompletion = true;
