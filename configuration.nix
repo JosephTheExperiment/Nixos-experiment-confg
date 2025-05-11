@@ -16,16 +16,18 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable the GNOME Desktop Environment
-  services.xserver = {
-    enable = true;
-    videoDrivers = [ "ati" "amdgpu" ];
+  services = {
+    xserver = {
+      enable = true;
+      videoDrivers = [ "ati" "amdgpu" ];
+    };
     desktopManager.plasma6.enable = true;
     displayManager = {
       sddm.enable = true;
       sddm.wayland.enable = false;
     };
   };
-
+  
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
