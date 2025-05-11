@@ -15,7 +15,8 @@
   # Internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable the GNOME Desktop Environment
+  # Enable the Plasma6 desktop environment
+  # Set the video drivers for amd gpu's
   services = {
     xserver = {
       enable = true;
@@ -24,7 +25,7 @@
     desktopManager.plasma6.enable = true;
     displayManager = {
       sddm.enable = true;
-      sddm.wayland.enable = false;
+      sddm.wayland.enable = true;
     };
   };
   
@@ -43,6 +44,9 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+
+  # Enable bluetooth
+  hardware.bluetooth.enable = true;
 
   # Define a user account
   users.users.${pc.user} = {
