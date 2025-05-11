@@ -56,8 +56,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # System wide packages
-  environment.systemPackages =
-    [ pkgs.brave pkgs.floorp pkgs.busybox pkgs.home-manager ];
+  environment.systemPackages = [ pkgs.floorp pkgs.busybox pkgs.home-manager ];
 
   # Enable appimage support
   programs.appimage.enable = true;
