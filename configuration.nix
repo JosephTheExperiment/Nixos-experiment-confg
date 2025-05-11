@@ -19,10 +19,10 @@
   services.xserver = {
     enable = true;
     videoDrivers = [ "ati" "amdgpu" ];
-    desktopManager.gnome.enable = true;
+    desktopManager.plasma6.enable = true;
     displayManager = {
-      gdm.enable = true;
-      gdm.wayland = false;
+      sddm.enable = true;
+      sddm.wayland = false;
     };
   };
 
