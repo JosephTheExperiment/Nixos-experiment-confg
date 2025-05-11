@@ -56,7 +56,8 @@
   nixpkgs.config.allowUnfree = true;
 
   # System wide packages
-  environment.systemPackages = [ pkgs.brave pkgs.busybox pkgs.home-manager ];
+  environment.systemPackages =
+    [ pkgs.brave pkgs.floorp pkgs.busybox pkgs.home-manager ];
 
   # Enable appimage support
   programs.appimage.enable = true;
@@ -67,12 +68,8 @@
   users.defaultUserShell = pkgs.zsh;
 
   # Fonts
-  fonts.packages = [
-    pkgs.nerdfonts
-    pkgs.noto-fonts
-    pkgs.dejavu_fonts
-    pkgs.font-awesome
-  ];
+  fonts.packages =
+    [ pkgs.nerdfonts pkgs.noto-fonts pkgs.dejavu_fonts pkgs.font-awesome ];
 
   system.stateVersion = "24.11"; # No touchy
 }

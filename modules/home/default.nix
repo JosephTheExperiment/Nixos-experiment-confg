@@ -1,10 +1,9 @@
 {
   imports = [
-    ./git.nix
-    ./nixvim.nix
     ./../shared/gaming/home.nix
+    ./terminal/default.nix
+    ./git.nix
     ./plangs-env.nix
-    ./zsh.nix
-    ./kitty.nix
+    ./nixvim.nix
   ];
 }
