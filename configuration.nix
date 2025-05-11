@@ -22,7 +22,7 @@
     desktopManager.plasma6.enable = true;
     displayManager = {
       sddm.enable = true;
-      sddm.wayland = false;
+      sddm.wayland.enable = false;
     };
   };
 
