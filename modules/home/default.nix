@@ -4,6 +4,6 @@
     ./terminal/default.nix
     ./git.nix
     ./plangs-env.nix
-    ./nixvim/default.nix
+    ./nixvim.nix
   ];
 }
