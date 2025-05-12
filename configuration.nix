@@ -55,10 +55,6 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
-  environment.sessionVariables = rec {
-    QT_SCALE_FACTOR_ROUNDING_POLICY = "RoundPreferFloor";
-  };
-
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -67,6 +63,9 @@
 
   # System wide packages
   environment.systemPackages = [ pkgs.floorp pkgs.busybox pkgs.home-manager ];
+
+  # Enable kde connect
+  programs.kdeconnect.enable = true;
 
   # Enable appimage support
   programs.appimage.enable = true;
