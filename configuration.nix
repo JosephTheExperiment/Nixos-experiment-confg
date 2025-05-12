@@ -55,6 +55,10 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
+  environment.sessionVariables = rec {
+    QT_SCALE_FACTOR_ROUNDING_POLICY = "RoundPreferFloor";
+  };
+
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
