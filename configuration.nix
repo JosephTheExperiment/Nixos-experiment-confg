@@ -15,17 +15,17 @@
   # Internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable the Plasma6 desktop environment
+  # Enable the Lxqt desktop environment
   # Set the video drivers for amd gpu's
   services = {
     xserver = {
       enable = true;
       videoDrivers = [ "ati" "amdgpu" ];
     };
-    desktopManager.plasma6.enable = true;
+    desktopManager.lxqt.enable = true;
     displayManager = {
-      sddm.enable = true;
-      sddm.wayland.enable = true;
+      lightdm.enable = true;
+      lightdm.wayland.enable = false;
     };
   };
 
