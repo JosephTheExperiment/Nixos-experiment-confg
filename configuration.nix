@@ -17,18 +17,13 @@
 
   # Enable the plasma6 for x11 desktop environment
   # Set the video drivers for amd gpu's
-  services = {
-    xserver = {
-      enable = true;
-      videoDrivers = [ "ati" "amdgpu" ];
-    };
-    desktopManager.plasma6.enable = true;
-    displayManager = {
-      sddm.enable = true;
-      sddm.wayland.enable = true;
-    };
+  services.xserver = {
+    enable = true;
+    displayManager.lightdm.enable = true;
+    desktopManager.budgie.enable = true;
+    videoDrivers = [ "ati" "amdgpu" ];
   };
-
+  
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
