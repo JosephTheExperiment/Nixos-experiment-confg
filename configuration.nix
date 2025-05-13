@@ -26,7 +26,6 @@
     displayManager = {
       sddm.enable = true;
       sddm.wayland.enable = false;
-      defaultSession = "plasmax11";
     };
   };
 
