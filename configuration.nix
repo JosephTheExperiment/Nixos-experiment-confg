@@ -15,7 +15,7 @@
   # Internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable the plasma6 for x11 desktop environment
+  # Enable the budgie for x11 desktop environment
   # Set the video drivers for amd gpu's
   services.xserver = {
     enable = true;
@@ -58,9 +58,6 @@
 
   # System wide packages
   environment.systemPackages = [ pkgs.floorp pkgs.busybox pkgs.home-manager ];
-
-  # Enable kde connect
-  programs.kdeconnect.enable = true;
 
   # Enable appimage support
   programs.appimage.enable = true;
