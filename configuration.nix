@@ -15,16 +15,19 @@
   # Internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable the Lxqt desktop environment
+  # Enable the plasma6 for x11 desktop environment
   # Set the video drivers for amd gpu's
   services = {
     xserver = {
       enable = true;
       videoDrivers = [ "ati" "amdgpu" ];
-      desktopManager.lxqt.enable = true;
-      displayManager.lightdm.enable = true;
     };
-
+    desktopManager.plasma6.enable = true;
+    displayManager = {
+      sddm.enable = true;
+      sddm.wayland.enable = false;
+      defaultSession = "plasmax11";
+    };
   };
 
   # Configure keymap in X11
