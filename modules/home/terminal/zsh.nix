@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }: {
+{ pkgs, ... }: {
   home.packages = [ pkgs.thefuck ];
   programs.zsh = {
     enable = true;
@@ -7,7 +7,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      nix-switch = "sudo nixos-rebuild switch --flake .";
+      nixos-switch = "sudo nixos-rebuild switch --flake .";
       home-switch = "home-manager switch --flake .";
     };
 
