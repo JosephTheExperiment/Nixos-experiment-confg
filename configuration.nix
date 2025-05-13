@@ -22,10 +22,7 @@
       enable = true;
       videoDrivers = [ "ati" "amdgpu" ];
       desktopManager.lxqt.enable = true;
-      displayManager = {
-        lightdm.enable = true;
-        lightdm.wayland.enable = false;
-      };
+      displayManager.lightdm.enable = true;
     };
 
   };
