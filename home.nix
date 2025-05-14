@@ -13,12 +13,19 @@
 
     # Unstable apps
     pkgs-unstable.gearlever
-    pkgs-unstable.bottles
 
     # Nix utilities
     pkgs.nixfmt-classic
     pkgs.nixd
   ];
 
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Night fox theme";
+      package = pkgs.nightfox-gtk-theme;
+    };
+  };
+  
   programs.home-manager.enable = true;
 }

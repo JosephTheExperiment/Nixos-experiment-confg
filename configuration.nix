@@ -19,7 +19,10 @@
   # Set the video drivers for amd gpu's
   services.xserver = {
     enable = true;
-    displayManager.lightdm.enable = true;
+    displayManager.lightdm = {
+      enable = true;
+      greeters.slick.enable = true;
+    };
     desktopManager.budgie.enable = true;
     videoDrivers = [ "ati" "amdgpu" ];
   };
@@ -63,6 +66,9 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
+  # Enable flatpak
+  services.flatpak.enable = true;
+  
   # Enable zsh
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
