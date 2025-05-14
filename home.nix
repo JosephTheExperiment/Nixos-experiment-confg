@@ -22,8 +22,8 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Night fox theme";
-      package = pkgs.nightfox-gtk-theme;
+      name = "Nordic theme";
+      package = pkgs.nordic;
     };
   };
   

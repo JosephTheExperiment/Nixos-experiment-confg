@@ -21,7 +21,7 @@
     enable = true;
     displayManager.lightdm = {
       enable = true;
-      greeters.slick.enable = true;
+      pantheon.slick.enable = true;
     };
     desktopManager.budgie.enable = true;
     videoDrivers = [ "ati" "amdgpu" ];
