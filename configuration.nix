@@ -23,7 +23,7 @@
       greeters.pantheon.enable = true;
       greeter = {
         enable = true;
-        package = pkgs.elementary-greeter;
+        package = pkgs.pantheon.elementary-greeter;
       };
     };
     desktopManager.budgie.enable = true;
