@@ -18,14 +18,6 @@
     pkgs.nixfmt-classic
     pkgs.nixd
   ];
-
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Nordic theme";
-      package = pkgs.nordic;
-    };
-  };
-  
+ 
   programs.home-manager.enable = true;
 }
