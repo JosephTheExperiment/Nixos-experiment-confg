@@ -21,7 +21,7 @@
     enable = true;
     displayManager.lightdm = {
       enable = true;
-      pantheon.enable = true;
+      greeters.pantheon.enable = true;
     };
     desktopManager.budgie.enable = true;
     videoDrivers = [ "ati" "amdgpu" ];
