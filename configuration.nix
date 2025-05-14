@@ -63,9 +63,10 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
-  # Enable flatpak
+  # Enable flatpak and xdg portal
   services.flatpak.enable = true;
-  
+  xdg.portal.enable = true;
+    
   # Enable zsh
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
