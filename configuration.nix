@@ -19,7 +19,13 @@
   # Set the video drivers for amd gpu's
   services.xserver = {
     enable = true;
-    displayManager.lightdm.greeters.pantheon.enable = true;
+    displayManager.lightdm = {
+      greeters.pantheon.enable = true;
+      greeter = {
+        enable = true;
+        package = pkgs.elementary-greeter;
+      };
+    };
     desktopManager.budgie.enable = true;
     videoDrivers = [ "ati" "amdgpu" ];
   };
