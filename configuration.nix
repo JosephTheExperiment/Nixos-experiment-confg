@@ -24,6 +24,7 @@
       greeter = {
         enable = true;
         package = pkgs.pantheon.elementary-greeter;
+        name = "io.elementary.greeter";
       };
     };
     desktopManager.budgie.enable = true;
