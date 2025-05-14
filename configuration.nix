@@ -1,4 +1,4 @@
-{ pc, pkgs, pkgs-unstable, ... }: {
+{ pc, lib, pkgs, pkgs-unstable, ... }: {
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -19,7 +19,7 @@
   # Set the video drivers for amd gpu's
   services.xserver = {
     enable = true;
-    displayManager.lightdm.greeters.pantheon.enable = true;
+    displayManager.lightdm.greeters.pantheon.enable = lib.mkDefault true;
     desktopManager.budgie.enable = true;
     videoDrivers = [ "ati" "amdgpu" ];
   };
