@@ -19,6 +19,7 @@
     pkgs.nixd
 
     # Utilities
+    pkgs.gnome-keyring
     pkgs.git-credential-manager
   ];
 
