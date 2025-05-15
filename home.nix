@@ -24,8 +24,14 @@
 
   gtk = {
     enable = true;
-    theme.package = pkgs.andromeda-gtk-theme;
-    cursorTheme.package = pkgs.nordzy-cursor-theme;
+    theme = {
+      name = "Andromeda";
+      package = pkgs.andromeda-gtk-theme;
+    };
+    cursorTheme = {
+      name = "Nordzy-hyprcursors";
+      package = pkgs.nordzy-cursor-theme;
+    };
   };
  
   programs.home-manager.enable = true;
