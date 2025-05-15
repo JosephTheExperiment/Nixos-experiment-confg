@@ -28,9 +28,9 @@
       name = "Andromeda";
       package = pkgs.andromeda-gtk-theme;
     };
-    cursorTheme = {
-      name = "Nordzy-hyprcursors";
-      package = pkgs.nordzy-cursor-theme;
+    iconTheme = {
+      name = "Andromeda";
+      package = pkgs.andromeda-gtk-theme;
     };
   };
  
