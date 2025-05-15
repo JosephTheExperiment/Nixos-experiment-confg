@@ -10,6 +10,7 @@
     extraConfig = {
       credential = {
         helper = "manager";
+        credentialStore = "cache";
       };
     };
   };
