@@ -17,7 +17,16 @@
     # Nix utilities
     pkgs.nixfmt-classic
     pkgs.nixd
+
+    # Utilities
+    pkgs.git-credential-manager
   ];
+
+  gtk = {
+    enable = true;
+    theme.package = pkgs.andromeda-gtk-theme;
+    cursorTheme.package = pkgs.nordzy-cursor-theme;
+  };
  
   programs.home-manager.enable = true;
 }
