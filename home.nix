@@ -21,17 +21,6 @@
     # Utilities
     pkgs.git-credential-manager
   ];
-
-  gtk = {
-    enable = true;    theme = {
-      name = "Flat Remix";
-      package = pkgs.flat-remix-gtk;
-    };
-    iconTheme = {
-      name = "Flat Remix";
-      package = pkgs.flat-remix-icon-theme;
-    };
-  };
  
   programs.home-manager.enable = true;
 }
