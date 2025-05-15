@@ -25,12 +25,12 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Andromeda";
-      package = pkgs.andromeda-gtk-theme;
+      name = "Flat Remix Darker";
+      package = pkgs.flat-remix-gtk;
     };
     iconTheme = {
-      name = "Andromeda";
-      package = pkgs.andromeda-gtk-theme;
+      name = "Flat-Remix-Blue-Dark";
+      package = pkgs.flat-remix-icon-theme;
     };
   };
  
