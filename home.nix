@@ -19,14 +19,11 @@
     pkgs.nixd
 
     # Utilities
-    pkgs.libsecret
-    pkgs.gnome-keyring
     pkgs.git-credential-manager
   ];
 
   gtk = {
-    enable = true;
-    theme = {
+    enable = true;    theme = {
       name = "Flat Remix";
       package = pkgs.flat-remix-gtk;
     };
