@@ -23,7 +23,10 @@
     desktopManager.xfce.enable = true;
     videoDrivers = [ "ati" "amdgpu" ];
   };
-  
+
+  # Enable gnome-keyring for git
+  services.gnome.gnome-keyring.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -69,7 +72,7 @@
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
-      
+
   # Enable zsh
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
