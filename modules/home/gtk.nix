@@ -15,6 +15,6 @@
         border-top-left-radius: 10px;
         border-width: 10px;
       }
-    ''
+    '';
   }; 
 }
