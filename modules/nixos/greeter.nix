@@ -1,6 +1,4 @@
 { pkgs, ... }: {
-  services.xserver.displayManager.lightdm.background =
-    "/home/joseph/Nixos-config/assets/wallpaper.jpg";
   services.xserver.displayManager.lightdm.greeters.gtk = {
     enable = true;
     theme = {
@@ -19,6 +17,7 @@
     extraConfig = ''
       [greeter]
       font-name = Fira-Code 12
+      background=/home/joseph/Nixos-config/assets/wallpaper.jpg 
     '';
   };
 }
