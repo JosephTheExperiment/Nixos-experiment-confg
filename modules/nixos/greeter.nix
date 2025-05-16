@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   services.xserver.displayManager.lightdm.background =
-    "/home/joseph/Nixos-config/assets/wallpaper.jpeg";
+    "/home/joseph/Pictures/wallpaper.jpeg";
   services.xserver.displayManager.lightdm.greeters.gtk = {
     enable = true;
     theme = {
@@ -16,6 +16,9 @@
       name = "Vimix-Cursors";
       size = 16;
     };
-    extraConfig = '''';
+    extraConfig = ''
+      [greeter]
+      font-name = Fira-Code 20
+    '';
   };
 }
