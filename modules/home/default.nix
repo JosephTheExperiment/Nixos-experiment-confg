@@ -3,7 +3,7 @@
     ./../shared/gaming/home.nix
     ./terminal/default.nix
     ./git.nix
-    ./gtk.nix
+    ./xfce.nix
     ./plangs-env.nix
   ];
 }

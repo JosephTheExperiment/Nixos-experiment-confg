@@ -1,1 +1,1 @@
-{ imports = [ ./kitty.nix ./zsh.nix ./tmux.nix ]; }
+{ imports = [ ./terminator.nix ./zsh.nix ]; }

@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  home.packages = [ pkgs.git-credential-manager ];
+  home.packages = [ pkgs.git-credential-manager pkgs.gnome-keyring ];
 
   # Git config
   programs.git = {
