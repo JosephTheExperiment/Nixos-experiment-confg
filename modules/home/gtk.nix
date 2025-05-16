@@ -9,5 +9,12 @@
       name = "Flat Remix";
       package = pkgs.flat-remix-icon-theme;
     };
+    gtk3.extraCss = ''
+      .xfce4-panel.vertical {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-width: 10px;
+      }
+    ''
   }; 
 }
