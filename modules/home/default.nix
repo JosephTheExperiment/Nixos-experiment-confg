@@ -5,6 +5,5 @@
     ./git.nix
     ./gtk.nix
     ./plangs-env.nix
-    ./helix.nix
   ];
 }
