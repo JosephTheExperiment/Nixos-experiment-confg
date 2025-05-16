@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   services.xserver.displayManager.lightdm.background =
-    "/home/joseph/Pictures/wallpaper.jpeg";
+    "/home/joseph/.local/share/backgrounds/wallpaper.jpeg";
   services.xserver.displayManager.lightdm.greeters.gtk = {
     enable = true;
     theme = {
@@ -18,7 +18,7 @@
     };
     extraConfig = ''
       [greeter]
-      font-name = Fira-Code 20
+      font-name = Fira-Code 15
     '';
   };
 }
