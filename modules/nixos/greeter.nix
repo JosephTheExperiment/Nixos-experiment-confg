@@ -16,8 +16,6 @@
       name = "Vimix-Cursors";
       size = 16;
     };
-    extraConfig = ''
-      user-background = true
-    '';
+    extraConfig = '''';
   };
 }
