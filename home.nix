@@ -9,7 +9,7 @@
     # Apps
     pkgs.inkscape
     pkgs.obsidian
-    pkgs.lapce
+    pkgs.vscode
     
     # Unstable apps
     pkgs-unstable.gearlever
