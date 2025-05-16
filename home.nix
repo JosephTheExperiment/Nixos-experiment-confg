@@ -21,6 +21,7 @@
     # Utilities
     pkgs.git-credential-manager
     pkgs.gnome-keyring
+    pkgs.conky
   ];
  
   programs.home-manager.enable = true;
