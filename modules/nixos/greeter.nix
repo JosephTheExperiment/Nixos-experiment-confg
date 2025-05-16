@@ -17,7 +17,6 @@
     extraConfig = ''
       [greeter]
       font-name = Fira-Code 12
-      background=/home/joseph/Nixos-config/assets/wallpaper.jpg 
     '';
   };
 }
