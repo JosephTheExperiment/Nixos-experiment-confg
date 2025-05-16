@@ -20,6 +20,7 @@
 
     # Utilities
     pkgs.git-credential-manager
+    pkgs.gnome-keyring
   ];
  
   programs.home-manager.enable = true;
