@@ -13,7 +13,7 @@
       .xfce4-panel.vertical {
         border-bottom-left-radius: 15px;
         border-top-left-radius: 15px;
-        padding: 10px;
+        border-width: 25px;
       }
     '';
   }; 
