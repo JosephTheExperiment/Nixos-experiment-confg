@@ -1,4 +1,6 @@
 { pkgs, ... }: {
+  services.xserver.displayManager.lightdm.background =
+    "/home/joseph/Nixos-config/assets/wallpaper.jpeg";
   services.xserver.displayManager.lightdm.greeters.gtk = {
     enable = true;
     theme = {
