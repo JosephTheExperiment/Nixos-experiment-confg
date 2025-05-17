@@ -16,7 +16,7 @@
     };
     extraConfig = ''
       [greeter]
-      font-name = Fira-Code 12
+      font-name = JetBrainsMono 10
     '';
   };
 }
