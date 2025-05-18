@@ -15,7 +15,7 @@
   # Internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable the budgie for x11 desktop environment
+  # Enable the xfce as the desktop environment
   # Set the video drivers for amd gpu's
   services.xserver = {
     enable = true;
@@ -60,7 +60,12 @@
   nixpkgs.config.allowUnfree = true;
 
   # System wide packages
-  environment.systemPackages = [ pkgs.floorp pkgs.busybox pkgs.home-manager ];
+  environment.systemPackages = [
+    pkgs.floorp
+    pkgs.busybox
+    pkgs.home-manager
+    pkgs.xfce.xfce4-whiskermenu-plugin
+  ];
 
   # Enable appimage support
   programs.appimage.enable = true;

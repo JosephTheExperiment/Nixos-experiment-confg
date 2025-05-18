@@ -1,6 +1,5 @@
 { pkgs, ... }: {
-  home.packages =
-    [ pkgs.git-credential-manager pkgs.gnome-keyring pkgs.libsecret ];
+  home.packages = [ pkgs.git-credential-manager pkgs.libsecret ];
 
   # Git config
   programs.git = {

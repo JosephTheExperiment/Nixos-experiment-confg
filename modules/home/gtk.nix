@@ -1,6 +1,4 @@
 { pkgs, ... }: {
-  home.packages = [ pkgs.xfce.xfce4-whiskermenu-plugin pkgs.conky ];
-
   gtk = {
     enable = true;
     theme = {
