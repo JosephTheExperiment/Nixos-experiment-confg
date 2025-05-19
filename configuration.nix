@@ -64,9 +64,11 @@
     pkgs.floorp
     pkgs.busybox
     pkgs.home-manager
-    pkgs.xfce.xfce4-whiskermenu-plugin
+
+    # Xfce4 plugins
     pkgs.xfce.xfce4-docklike-plugin
     pkgs.xfce.xfce4-clipman-plugin
+    pkgs.xfce.xfce4-xkb-plugin
   ];
 
   # Enable appimage support
