@@ -15,14 +15,14 @@
       size = 16;
     };
     gtk3.extraCss = ''
-      .xfce4-panel.horizontal {
-        border-radius: 12px;
-        
+      .panel-4 {
+        border-top-left-radius: 13px;
+        border-top-right-radius: 13px;
       }
 
       .xfce4-panel.vertical {
-        border-top-left-radius: 12px;
-        border-bottom-left-radius: 12px;
+        border-top-left-radius: 13px;
+        border-bottom-left-radius: 13px;
       }
     '';
   };
