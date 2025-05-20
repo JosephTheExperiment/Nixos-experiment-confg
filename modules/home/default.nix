@@ -4,6 +4,6 @@
     ./terminal/default.nix
     ./git.nix
     ./gtk.nix
-    ./plangs-env.nix
+    ./languages-env.nix
   ];
 }

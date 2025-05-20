@@ -18,11 +18,6 @@
       .xfce4-panel.horizontal {
         border-radius: 10px;
       }
-
-      .xfce4-panel.vertical {
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-      }
     '';
   };
 }
