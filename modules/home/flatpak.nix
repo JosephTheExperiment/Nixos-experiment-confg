@@ -1,9 +1,12 @@
 { lib, ... }: {
   services.flatpak = {
-    remotes = lib.mkOptionDefault [{
+    remotes = [{
       name = "flathub";
       location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
     }];
-    packages = [ "app.zen_browser.zen" ];
+    packages = [{
+      appId = "app.zen_browser.zen";
+      origin = "flathub";
+    }];
   };
 }
