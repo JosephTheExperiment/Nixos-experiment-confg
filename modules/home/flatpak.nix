@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{
   services.flatpak = {
     remotes = [{
       name = "flathub";
