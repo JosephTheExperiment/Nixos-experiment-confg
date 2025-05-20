@@ -6,10 +6,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -30,7 +27,7 @@
     in {
       nixosConfigurations.${pc.host} = nixpkgs.lib.nixosSystem {
         system = pc.system;
-        specialArgs = { inherit pkgs-unstable pc; };
+        specialArgs = { inherit pc pkgs pkgs-unstable; };
         modules = [
           ./configuration.nix
           ./hardware-configuration.nix
@@ -41,11 +38,11 @@
       homeConfigurations.${pc.user} =
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit pkgs-unstable pc; };
+          extraSpecialArgs = { inherit pc pkgs-unstable; };
           modules = [
             ./home.nix
-            inputs.nixvim.homeManagerModules.nixvim
             ./modules/home/default.nix
+            inputs.nix-flatpak.homeManagerModules.nix-flatpak
           ];
         };
     };
