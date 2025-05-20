@@ -5,5 +5,6 @@
     ./git.nix
     ./gtk.nix
     ./languages-env.nix
+    ./flatpak.nix
   ];
 }
