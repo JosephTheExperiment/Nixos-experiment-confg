@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   # System wide packages
   environment.systemPackages = [
-    pkgs.floorp
     pkgs.busybox
     pkgs.home-manager
 
