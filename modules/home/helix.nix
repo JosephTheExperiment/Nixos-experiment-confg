@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   programs.helix = {
     enable = true;
-    package = pkgs.helix;
     defaultEditor = true;
     settings = { theme = "tokyonight"; };
     languages.language = [{
