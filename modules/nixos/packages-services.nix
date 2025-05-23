@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   # System wide packages
   environment.systemPackages = [
+    pkgs.uutils-coreutils
     pkgs.home-manager
 
     # Xfce4 plugins
@@ -25,7 +26,6 @@
 
   # Enable zsh
   programs.fish.enable = true;
-  users.defaultUserShell = pkgs.fish;
 
   # Fonts
   fonts.packages =

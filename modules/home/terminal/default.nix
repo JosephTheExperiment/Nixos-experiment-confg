@@ -1,1 +1,3 @@
-{ imports = [ ./terminator.nix ./fish.nix ./zellij.nix ]; }
+{
+  imports = [ ./terminator.nix ./fish.nix ./zellij.nix ./programs/default.nix ];
+}
