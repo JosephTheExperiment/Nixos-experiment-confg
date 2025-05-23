@@ -24,8 +24,8 @@
   services.gnome.gnome-keyring.enable = true;
 
   # Enable zsh
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
+  programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
 
   # Fonts
   fonts.packages =
