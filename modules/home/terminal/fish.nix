@@ -1,6 +1,5 @@
 { pkgs, ... }: {
   home.packages = [ pkgs.thefuck ];
-  home.shell.enableFishIntegration = true;
   programs.fish = {
     enable = true;
     shellAliases = {

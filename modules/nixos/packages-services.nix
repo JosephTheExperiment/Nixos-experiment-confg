@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   # System wide packages
   environment.systemPackages = [
-    pkgs.uutils-coreutils
+    pkgs.uutils-coreutils-noprefix
     pkgs.home-manager
 
     # Xfce4 plugins

@@ -11,6 +11,9 @@
 
     # Unstable apps
     pkgs-unstable.gearlever
+
+    # Utils
+    pkgs.manix
   ];
 
   programs.home-manager.enable = true;

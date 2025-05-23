@@ -7,5 +7,4 @@
 
   # Options for games
   programs.gamemode.enable = true;
-  programs.gamescope.enable = true;
 }
