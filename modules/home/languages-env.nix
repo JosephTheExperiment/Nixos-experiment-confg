@@ -10,5 +10,9 @@
     pkgs.gcc
     pkgs.gnumake
     pkgs.clang-tools
+
+    # Nix
+    pkgs.nixfmt-classic
+    pkgs.nixd
   ];
 }

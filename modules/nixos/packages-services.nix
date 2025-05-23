@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   # System wide packages
   environment.systemPackages = [
-    pkgs.busybox
     pkgs.home-manager
 
     # Xfce4 plugins

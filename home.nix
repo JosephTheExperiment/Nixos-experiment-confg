@@ -11,10 +11,6 @@
 
     # Unstable apps
     pkgs-unstable.gearlever
-
-    # Nix utilities
-    pkgs.nixfmt-classic
-    pkgs.nixd
   ];
 
   programs.home-manager.enable = true;
