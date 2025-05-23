@@ -48,7 +48,7 @@
     isNormalUser = true;
     description = "Joseph";
     extraGroups = [ "wheel" "networkmanager" ];
-    shell = pkgs.fish
+    shell = pkgs.fish;
   };
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
