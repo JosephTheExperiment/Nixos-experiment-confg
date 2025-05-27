@@ -9,11 +9,6 @@
       name = "Flat-Remix-Blue-Dark";
       package = pkgs.flat-remix-icon-theme;
     };
-    cursorTheme = {
-      package = pkgs.quintom-cursor-theme;
-      name = "Quintom_Ink";
-      size = 16;
-    };
     extraConfig = ''
       [greeter]
       font-name = FiraCode 10
