@@ -10,7 +10,7 @@
       package = pkgs.flat-remix-icon-theme;
     };
     cursorTheme = {
-      package = pkgs.vimix-cursor;
+      package = pkgs.vimix-cursors;
       name = "Vimix-Cursors";
       size = 16;
     };
