@@ -1,6 +1,6 @@
-{ pkgs, ... }: {
+{ lib, pkgs, ... }: {
   home.sessionVariables = {
-    ZELLIJ_AUTO_ATTACH = "true";
+    ZELLIJ_AUTO_ATTACH = lib.mkDefault "true";
     ZELLIJ_AUTO_EXIT = "true";
   };
 
