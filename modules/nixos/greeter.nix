@@ -11,7 +11,7 @@
     };
     cursorTheme = {
       package = pkgs.quintom-cursor-theme;
-      name = "quintom-cursor-theme";
+      name = "Quintom_Ink";
       size = 16;
     };
     extraConfig = ''
