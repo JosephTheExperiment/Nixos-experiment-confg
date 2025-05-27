@@ -10,8 +10,8 @@
       package = pkgs.flat-remix-icon-theme;
     };
     cursorTheme = {
-      package = pkgs.layan-cursors;
-      name = "Layan Cursors";
+      package = pkgs.quintom-cursor-theme;
+      name = "quintom-cursor-theme";
       size = 16;
     };
     gtk3.extraCss = ''
