@@ -1,9 +1,4 @@
-{ lib, pkgs, ... }: {
-  home.sessionVariables = {
-    ZELLIJ_AUTO_ATTACH = lib.mkDefault "true";
-    ZELLIJ_AUTO_EXIT = lib.mkDefault "true";
-  };
-
+{ pkgs, ... }: {
   programs.zellij = {
     enable = true;
     enableFishIntegration = true;
