@@ -10,8 +10,8 @@
       package = pkgs.flat-remix-icon-theme;
     };
     cursorTheme = {
-      package = pkgs.vimix-cursors;
-      name = "Vimix-Cursors";
+      package = pkgs.layan-cursors;
+      name = "Layan Cursors";
       size = 16;
     };
     gtk3.extraCss = ''

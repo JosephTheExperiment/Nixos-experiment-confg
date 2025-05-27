@@ -10,13 +10,13 @@
       package = pkgs.flat-remix-icon-theme;
     };
     cursorTheme = {
-      package = pkgs.vimix-cursors;
-      name = "Vimix-Cursors";
+      package = pkgs.layan-cursors;
+      name = "Layan Cursors";
       size = 16;
     };
     extraConfig = ''
       [greeter]
-      font-name = JetBrainsMono 10
+      font-name = FiraCode 10
     '';
   };
 }
