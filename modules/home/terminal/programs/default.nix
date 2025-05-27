@@ -4,7 +4,10 @@
   home.packages = [ pkgs.manix ];
 
   programs = {
-    bat.enable = true;
+    bat = {
+      enable = true;
+      config = { theme = "Sublime Snazz"; };
+    };
     zoxide = {
       enable = true;
       enableFishIntegration = true;
