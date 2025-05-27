@@ -28,6 +28,9 @@
   programs.fish.enable = true;
 
   # Fonts
-  fonts.packages =
-    [ pkgs.nerdfonts pkgs.noto-fonts pkgs.dejavu_fonts pkgs.font-awesome ];
+  fonts.packages = [
+    pkgs.nerd-fonts.fira-code
+    pkgs.nerd-fonts.jetbrains-mono
+    pkgs.nerd-fonts.terminess-ttf
+  ];
 }
