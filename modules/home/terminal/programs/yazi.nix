@@ -7,6 +7,6 @@
         dark = "tokyo-night";
       };
     };
-    flavors = { tokyo-night = builtins.toString ./extras/tokyo-night; };
+    flavors = { tokyo-night = "${../../../../extras/tokyo-night.yazi}"; };
   };
 }
