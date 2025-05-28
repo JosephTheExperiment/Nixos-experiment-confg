@@ -2,7 +2,10 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    settings = { theme = "tokyonight"; };
+    settings = {
+      theme = "tokyonight";
+      keys.insert = { "A-[" = "normal_mode"; };
+    };
     languages.language = [{
       name = "nix";
       auto-format = true;

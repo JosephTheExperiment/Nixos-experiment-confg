@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  imports = [ ./git.nix ./helix.nix ];
+  imports = [ ./git.nix ./helix.nix ./yazi.nix ];
 
   home.packages = [ pkgs.manix ];
 
