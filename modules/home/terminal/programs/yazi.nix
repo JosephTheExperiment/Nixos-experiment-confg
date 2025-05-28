@@ -7,6 +7,6 @@
         dark = "tokyo-night";
       };
     };
-    flavors = { tokyo-night = "${pc.config-root}/extras/tokyo-night"; };
+    flavors = { tokyo-night = "${pc.config}/extras/tokyo-night"; };
   };
 }
