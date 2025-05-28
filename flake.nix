@@ -14,7 +14,6 @@
         system = "x86_64-linux";
         user = "joseph";
         host = "nixos";
-        config-path = /home/joseph/Nixos-config;
       };
       pkgs = import nixpkgs {
         system = pc.system;
