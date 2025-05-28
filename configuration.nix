@@ -42,6 +42,7 @@
 
   # Enable bluetooth
   hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
   # Define a user account
   users.users.${pc.user} = {
