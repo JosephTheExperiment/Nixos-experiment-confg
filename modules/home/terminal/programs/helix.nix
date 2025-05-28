@@ -4,7 +4,7 @@
     defaultEditor = true;
     settings = {
       theme = "tokyonight";
-      keys.insert = { "A-[" = "normal_mode"; };
+      keys.insert = { "C-[" = "normal_mode"; };
     };
     languages.language = [{
       name = "nix";
