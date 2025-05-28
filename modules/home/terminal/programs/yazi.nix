@@ -1,4 +1,4 @@
-{
+{ pc, ... }: {
   programs.yazi = {
     enable = true;
     theme = {
@@ -7,6 +7,6 @@
         dark = "tokyo-night";
       };
     };
-    flavors = { tokyo-night = "${../../../../extras/tokyo-night.yazi}"; };
+    flavors = { tokyo-night = "${pc.config-path}/extras/tokyo-night.yazi"; };
   };
 }
