@@ -1,4 +1,4 @@
-{ pc }: {
+{
   programs.yazi = {
     enable = true;
     theme = {
@@ -7,6 +7,6 @@
         dark = "tokyo-night";
       };
     };
-    flavors = { tokyo-night = "${pc.config}/extras/tokyo-night"; };
+    flavors = { tokyo-night = builtins.toString ./extras/tokyo-night; };
   };
 }
