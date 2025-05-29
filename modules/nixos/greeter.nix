@@ -2,12 +2,12 @@
   services.xserver.displayManager.lightdm.greeters.gtk = {
     enable = true;
     theme = {
-      name = "Nordic-darker-standard-buttons";
-      package = pkgs.nordic;
+      name = "Tokyonight-Dark";
+      package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
-      name = "Nordic-darker";
-      package = pkgs.nordic;
+      name = "Colloid-Dark";
+      package = pkgs.colloid-icon-theme;
     };
     cursorTheme = {
       package = pkgs.nordic;

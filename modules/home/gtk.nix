@@ -2,11 +2,11 @@
   gtk = {
     enable = true;
     theme = {
-      name = "tokyo-night";
+      name = "Tokyonight-Dark";
       package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
-      name = "colloid-icon-theme";
+      name = "Colloid-Dark";
       package = pkgs.colloid-icon-theme;
     };
     cursorTheme = {
