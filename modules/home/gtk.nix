@@ -15,9 +15,7 @@
       size = 16;
     };
     gtk3 = {
-      extraConfig = ''
-        gtk-cursor-theme-name="Quintom_Ink"
-      '';
+      extraConfig = { gtk-cursor-theme-name = "Quintom_Ink"; };
       extraCss = ''
         .xfce4-panel.horizontal {
           border-radius: 10px;
