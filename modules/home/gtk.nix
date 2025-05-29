@@ -14,10 +14,15 @@
       name = "Quintom_Ink";
       size = 16;
     };
-    gtk3.extraCss = ''
-      .xfce4-panel.horizontal {
-        border-radius: 10px;
-      }
-    '';
+    gtk3 = {
+      extraConfig = ''
+        gtk-cursor-theme-name="Quintom_Ink"
+      '';
+      extraCss = ''
+        .xfce4-panel.horizontal {
+          border-radius: 10px;
+        }
+      '';
+    };
   };
 }
