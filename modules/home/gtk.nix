@@ -2,25 +2,22 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Flat-Remix-GTK-Blue-Dark";
-      package = pkgs.flat-remix-gtk;
+      name = "tokyo-night";
+      package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
-      name = "Flat-Remix-Blue-Dark";
-      package = pkgs.flat-remix-icon-theme;
+      name = "tokyo-night";
+      package = pkgs.tokyonight-gtk-theme;
     };
     cursorTheme = {
-      package = pkgs.quintom-cursor-theme;
-      name = "Quintom_Ink";
+      package = pkgs.vimix-cursors;
+      name = "Vimix Cursors";
       size = 16;
     };
-    gtk3 = {
-      extraConfig = { gtk-cursor-theme-name = "Quintom_Ink"; };
-      extraCss = ''
-        .xfce4-panel.horizontal {
-          border-radius: 10px;
-        }
-      '';
-    };
+    gtk3.extraCss = ''
+      .xfce4-panel.horizontal {
+        border-radius: 10px;
+      }
+    '';
   };
 }
