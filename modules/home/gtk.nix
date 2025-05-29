@@ -2,7 +2,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Nordic-darker-standard";
+      name = "Nordic-darker-standard-buttons";
       package = pkgs.nordic;
     };
     iconTheme = {
@@ -16,7 +16,7 @@
     };
     gtk3.extraCss = ''
       .xfce4-panel.horizontal {
-        border-radius: 10px;
+        border-radius: 12px;
       }
     '';
   };

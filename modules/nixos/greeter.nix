@@ -2,7 +2,7 @@
   services.xserver.displayManager.lightdm.greeters.gtk = {
     enable = true;
     theme = {
-      name = "Nordic-darker-standard";
+      name = "Nordic-darker-standard-buttons";
       package = pkgs.nordic;
     };
     iconTheme = {
