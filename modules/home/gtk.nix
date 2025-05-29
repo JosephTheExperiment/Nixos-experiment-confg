@@ -2,12 +2,12 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Nordic-darker-standard-buttons";
-      package = pkgs.nordic;
+      name = "tokyo-night";
+      package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
-      name = "Nordic-darker";
-      package = pkgs.nordic;
+      name = "colloid-icon-theme";
+      package = pkgs.colloid-icon-theme;
     };
     cursorTheme = {
       package = pkgs.nordic;
