@@ -2,12 +2,17 @@
   services.xserver.displayManager.lightdm.greeters.gtk = {
     enable = true;
     theme = {
-      name = "Flat-Remix-GTK-Blue-Dark";
-      package = pkgs.flat-remix-gtk;
+      name = "Nordic-darker-standard";
+      package = pkgs.nordic;
     };
     iconTheme = {
-      name = "Flat-Remix-Blue-Dark";
-      package = pkgs.flat-remix-icon-theme;
+      name = "Nordic-darker";
+      package = pkgs.nordic;
+    };
+    cursorTheme = {
+      package = pkgs.nordic;
+      name = "Nordic-cursors";
+      size = 16;
     };
     extraConfig = ''
       [greeter]

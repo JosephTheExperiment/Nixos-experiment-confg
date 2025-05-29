@@ -2,16 +2,16 @@
   gtk = {
     enable = true;
     theme = {
-      name = "nordic";
+      name = "Nordic-darker-standard";
       package = pkgs.nordic;
     };
     iconTheme = {
-      name = "nordzy-icon-theme";
-      package = pkgs.nordzy-icon-theme;
+      name = "Nordic-darker";
+      package = pkgs.nordic;
     };
     cursorTheme = {
-      package = pkgs.nordzy-cursor-theme;
-      name = "nordzy-cursor-theme";
+      package = pkgs.nordic;
+      name = "Nordic-cursors";
       size = 16;
     };
     gtk3.extraCss = ''
