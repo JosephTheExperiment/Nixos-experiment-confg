@@ -2,16 +2,16 @@
   gtk = {
     enable = true;
     theme = {
-      name = "tokyo-night";
-      package = pkgs.tokyonight-gtk-theme;
+      name = "nordic";
+      package = pkgs.nordic;
     };
     iconTheme = {
-      name = "tokyo-night";
-      package = pkgs.tokyonight-gtk-theme;
+      name = "nordzy-icon-theme";
+      package = pkgs.nordzy-icon-theme;
     };
     cursorTheme = {
-      package = pkgs.vimix-cursors;
-      name = "Vimix Cursors";
+      package = pkgs.nordzy-cursor-theme;
+      name = "nordzy-cursor-theme";
       size = 16;
     };
     gtk3.extraCss = ''
