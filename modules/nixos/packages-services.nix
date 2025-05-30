@@ -11,7 +11,7 @@
   ];
 
   # Enable thunar-archive-plugin
-  programs.thunar.plugins = [ pkgs.thunar-archive-plugin ];
+  programs.thunar.plugins = [ pkgs.xfce.thunar-archive-plugin ];
 
   # Enable linking via nix-ld module
   programs.nix-ld = {
