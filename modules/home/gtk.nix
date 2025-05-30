@@ -6,8 +6,8 @@
       package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
-      name = "dracula-icon-theme";
-      package = pkgs.dracula-icon-theme;
+      name = "nordzy-icon-theme";
+      package = pkgs.nordzy-icon-theme;
     };
     cursorTheme = {
       package = pkgs.nordic;
