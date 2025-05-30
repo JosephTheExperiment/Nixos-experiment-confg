@@ -10,6 +10,9 @@
     pkgs.xfce.xfce4-xkb-plugin
   ];
 
+  # Enable thunar-archive-plugin
+  programs.thunar.plugins = [ pkgs.thunar-archive-plugin ];
+
   # Enable linking via nix-ld module
   programs.nix-ld = {
     enable = true;
