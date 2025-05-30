@@ -7,7 +7,7 @@
     };
     iconTheme = {
       name = "Fluent";
-      package = pkgs.Fluent-icon-theme;
+      package = pkgs.fluent-icon-theme;
     };
     cursorTheme = {
       package = pkgs.nordic;
