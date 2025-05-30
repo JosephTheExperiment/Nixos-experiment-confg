@@ -1,12 +1,8 @@
-{ pkgs, ... }: {
-  home.packages = [
-    pkgs.mangohud
-    pkgs.protonup-ng
-    pkgs.heroic
-  ];
+{ pc, pkgs, ... }: {
+  home.packages = [ pkgs.mangohud pkgs.protonup-ng pkgs.heroic ];
 
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS =
-      "/home/joseph/.config/heroic/tools/proton";
+      "/home/${pc.user}/.config/heroic/tools/proton";
   };
 }
