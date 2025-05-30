@@ -4,7 +4,6 @@
     defaultEditor = true;
     settings = {
       theme = "tokyonight";
-      shell = [ "fish" "-c" ];
       keys.insert = { "Win-q" = "normal_mode"; };
     };
     languages.language = [{

@@ -10,6 +10,12 @@
     pkgs.xfce.xfce4-xkb-plugin
   ];
 
+  # Enable linking via nix-ld module
+  programs.nix-ld = {
+    enable = true;
+    libraries = [ ];
+  };
+
   # Enable appimage support
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
