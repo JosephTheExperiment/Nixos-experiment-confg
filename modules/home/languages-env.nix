@@ -10,6 +10,7 @@
     pkgs.gcc
     pkgs.gnumake
     pkgs.clang-tools
+    pkgs.just
 
     # Assembly x86
     pkgs.nasm
