@@ -6,8 +6,8 @@
       package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
-      name = "nordzy-icon-theme";
-      package = pkgs.nordzy-icon-theme;
+      name = "Fluent";
+      package = pkgs.Fluent-icon-theme;
     };
     cursorTheme = {
       package = pkgs.nordic;
