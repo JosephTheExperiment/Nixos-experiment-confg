@@ -6,7 +6,7 @@
       package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
-      name = "Dracula-dark";
+      name = "Dracula";
       package = pkgs.dracula-icon-theme;
     };
     cursorTheme = {
