@@ -7,10 +7,7 @@
     # Apps
     pkgs.inkscape
     pkgs.obsidian
-    pkgs.emote
-
-    # Unstable apps
-    pkgs-unstable.gearlever
+    pkgs.smile
   ];
 
   fonts.fontconfig.enable = true;
