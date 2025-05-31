@@ -1,1 +1,9 @@
-{ imports = [ ./ghostty.nix ./fish.nix ./zellij.nix ./programs/default.nix ]; }
+{
+  imports = [
+    ./ghostty.nix
+    ./fish.nix
+    ./zellij.nix
+    ./starship.nix
+    ./programs/default.nix
+  ];
+}

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ lib, pkgs, ... }: {
   # System wide packages
   environment.systemPackages = [
     pkgs.uutils-coreutils-noprefix
@@ -39,8 +39,8 @@
 
   # Fonts
   fonts.packages = [
-    pkgs.nerd-fonts.fira-code
-    pkgs.nerd-fonts.jetbrains-mono
-    pkgs.nerd-fonts.terminess-ttf
+    builtins.filter
+    lib.attrsets.isDerivation
+    (builtins.attrValues pkgs.nerd-fonts)
   ];
 }
