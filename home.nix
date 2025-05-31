@@ -7,7 +7,8 @@
     # Apps
     pkgs.inkscape
     pkgs.obsidian
-    pkgs.smile
+    pkgs.emote
+    pkgs.gearlever
   ];
 
   fonts.fontconfig.enable = true;
