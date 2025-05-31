@@ -2,10 +2,14 @@
   programs.zellij = {
     enable = true;
     enableFishIntegration = true;
-    settings = {
-      theme = "tokyo-night";
-      scrollback_editor = "${pkgs.helix}/bin/hx";
-      default_shell = "fish";
-    };
   };
+
+  xdg.configFile."zellij/config.kdl".text = ''
+    default_shell "fish"
+    theme "tokyo-night"
+    scrollback_editor "${pkgs.evil-helix}/bin/hx"
+    show_startup_tips false
+    pane_frames false
+    simplified_ui true  
+  '';
 }

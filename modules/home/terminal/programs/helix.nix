@@ -5,7 +5,7 @@
     defaultEditor = true;
     settings = {
       theme = "tokyonight";
-      keys.insert = { "Win-q" = "normal_mode"; };
+      keys.insert = { "A-q" = "normal_mode"; };
     };
     languages.language = [
       {

@@ -8,9 +8,11 @@
     pkgs.conan
     pkgs.vcpkg
     pkgs.gcc
-    pkgs.gnumake
     pkgs.clang-tools
+
+    # Build tools
     pkgs.just
+    pkgs.gnumake
 
     # Assembly x86
     pkgs.nasm

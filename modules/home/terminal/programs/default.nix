@@ -6,13 +6,18 @@
   programs = {
     bat = {
       enable = true;
-      config = { theme = "Sublime Snazz"; };
+      config = { theme = "Dracula"; };
     };
     zoxide = {
       enable = true;
       enableFishIntegration = true;
+      options = [ "--cmd cd" ];
     };
     eza = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+    starship = {
       enable = true;
       enableFishIntegration = true;
     };
