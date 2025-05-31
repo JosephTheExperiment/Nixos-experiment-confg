@@ -9,7 +9,5 @@
     theme "tokyo-night"
     scrollback_editor "${pkgs.evil-helix}/bin/hx"
     show_startup_tips false
-    pane_frames false
-    simplified_ui true  
   '';
 }
