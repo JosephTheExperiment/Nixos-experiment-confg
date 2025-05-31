@@ -39,8 +39,10 @@
 
   # Fonts
   fonts.packages = [
-    builtins.filter
-    lib.attrsets.isDerivation
-    (builtins.attrValues pkgs.nerd-fonts)
+    pkgs.nerd-fonts.fira-code
+    pkgs.nerd-fonts.jetbrains-mono
+    pkgs.nerd-fonts.hack
+    pkgs.nerd-fonts.symbols-only
+    pkgs.nerd-fonts.sauce-code-pro
   ];
 }
