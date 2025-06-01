@@ -58,5 +58,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  i18n.inputMethod = {
+    enabled = "ibus";
+    ibus.engines = [ pkgs.ibus-engines.typing-booster ];
+  };
+
   system.stateVersion = "24.11"; # No touchy
 }

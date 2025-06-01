@@ -11,7 +11,10 @@
     pkgs.gearlever
   ];
 
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts.emoji = [ "Noto Color Emoji" ];
+  };
 
   programs.home-manager.enable = true;
 }
