@@ -17,7 +17,6 @@
     # Assembly x86
     pkgs.nasm
     pkgs.nasmfmt
-    pkgs.asm-lsp
 
     # Nix
     pkgs.nixfmt-classic

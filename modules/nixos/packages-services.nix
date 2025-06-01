@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }: {
+{ pkgs, ... }: {
   # System wide packages
   environment.systemPackages = [
     pkgs.uutils-coreutils-noprefix
@@ -7,7 +7,6 @@
 
     # Xfce4 plugins
     pkgs.xfce.xfce4-docklike-plugin
-    pkgs.xfce.xfce4-clipman-plugin
     pkgs.xfce.xfce4-xkb-plugin
   ];
 
@@ -34,14 +33,16 @@
   # Enable gnome-keyring for git
   services.gnome.gnome-keyring.enable = true;
 
-  # Enable zsh
+  # Enable fish
   programs.fish.enable = true;
+
+  # Options for games
+  programs.gamemode.enable = true;
 
   # Fonts
   fonts = {
     enableDefaultPackages = true;
     packages = [
-      pkgs.noto-fonts
       pkgs.noto-fonts-color-emoji
       pkgs.nerd-fonts.fira-code
       pkgs.nerd-fonts.jetbrains-mono

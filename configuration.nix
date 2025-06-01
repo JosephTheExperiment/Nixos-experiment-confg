@@ -44,6 +44,12 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
+  # Enable opengl
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   # Define a user account
   users.users.${pc.user} = {
     isNormalUser = true;
