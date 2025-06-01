@@ -48,6 +48,5 @@
       pkgs.nerd-fonts.hack
       pkgs.nerd-fonts.symbols-only
     ];
-    fontconfig.defaultFonts.emoji = [ "Noto Color Emoji" ];
   };
 }

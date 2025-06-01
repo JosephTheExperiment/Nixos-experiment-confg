@@ -7,14 +7,8 @@
     # Apps
     pkgs.inkscape
     pkgs.obsidian
-    pkgs.emote
     pkgs.gearlever
   ];
-
-  fonts.fontconfig = {
-    enable = true;
-    defaultFonts.emoji = [ "Noto Color Emoji" ];
-  };
 
   programs.home-manager.enable = true;
 }
