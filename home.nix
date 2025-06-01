@@ -8,7 +8,6 @@
     pkgs.inkscape
     pkgs.obsidian
     pkgs.gearlever
-    pkgs.emote
   ];
 
   programs.home-manager.enable = true;
