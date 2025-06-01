@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   imports = [ ./git.nix ./helix.nix ./yazi.nix ];
 
-  home.packages = [ pkgs.manix ];
+  home.packages = [ pkgs.emoji-picker ];
 
   programs = {
     bat = {
