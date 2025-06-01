@@ -1,8 +1,6 @@
 { pkgs, ... }: {
   imports = [ ./git.nix ./helix.nix ./yazi.nix ];
 
-  home.packages = [ pkgs.emoji-picker ];
-
   programs = {
     bat = {
       enable = true;
