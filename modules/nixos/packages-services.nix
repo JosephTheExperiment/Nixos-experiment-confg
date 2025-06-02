@@ -38,16 +38,4 @@
 
   # Options for games
   programs.gamemode.enable = true;
-
-  # Fonts
-  fonts = {
-    enableDefaultPackages = true;
-    packages = [
-      pkgs.noto-fonts-color-emoji
-      pkgs.nerd-fonts.fira-code
-      pkgs.nerd-fonts.jetbrains-mono
-      pkgs.nerd-fonts.hack
-      pkgs.nerd-fonts.symbols-only
-    ];
-  };
 }
