@@ -1,6 +1,4 @@
 { pkgs, ... }: {
-  environment.systemPackages = [ pkgs.emote ];
-
   fonts = {
     enableDefaultPackages = true;
     fontDir.enable = true;
