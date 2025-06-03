@@ -4,7 +4,6 @@
     pkgs.uutils-coreutils-noprefix
     pkgs.file-roller
     pkgs.home-manager
-    pkgs.thunderbird
 
     # Xfce4 plugins
     pkgs.xfce.xfce4-docklike-plugin
