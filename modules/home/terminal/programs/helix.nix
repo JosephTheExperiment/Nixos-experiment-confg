@@ -3,10 +3,7 @@
     enable = true;
     package = pkgs.evil-helix;
     defaultEditor = true;
-    settings = {
-      theme = "tokyonight";
-      keys.insert = { "A-q" = "normal_mode"; };
-    };
+    settings = { keys.insert = { "A-q" = "normal_mode"; }; };
     languages.language = [
       {
         name = "nix";
