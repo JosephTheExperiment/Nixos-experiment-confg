@@ -8,7 +8,6 @@
     imageScalingMode = "fit";
     targets = {
       xfce.enable = false;
-      lightdm.enable = false;
       gtk.enable = false;
     };
     fonts = {
