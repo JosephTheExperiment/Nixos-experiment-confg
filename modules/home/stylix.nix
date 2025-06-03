@@ -2,29 +2,35 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
     polarity = "dark";
     image = ../../assets/nix-wallpaper-nineish.png;
+    imageScalingMode = "fit";
     targets = {
-      xfce.enable = true;
-      gtk.extraCss = ''
-        .xfce4-panel.horizontal {
-          border-radius: 12px;
-        }
-      '';
+      xfce.enable = false;
+      lightdm.enable = false;
+      gtk.enable = false;
     };
     fonts = {
+      sizes.applications = 10;
+      packages = [
+        pkgs.noto-fonts
+        pkgs.noto-fonts-color-emoji
+        pkgs.nerd-fonts.fira-code
+        pkgs.nerd-fonts.jetbrains-mono
+        pkgs.nerd-fonts.symbols-only
+      ];
       serif = {
         package = pkgs.nerd-fonts.fira-code;
-        name = "FiraCode Nerd Font Regular";
+        name = "FiraCode Nerd Font";
       };
       sansSerif = {
         package = pkgs.nerd-fonts.fira-code;
-        name = "FiraCode Nerd Font Regular";
+        name = "FiraCode Nerd Font";
       };
       monospace = {
         package = pkgs.nerd-fonts.fira-code;
-        name = "FiraCode Nerd Font Mono Regular";
+        name = "FiraCode Nerd Font Mono";
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
