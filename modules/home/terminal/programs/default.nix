@@ -2,10 +2,7 @@
   imports = [ ./git.nix ./helix.nix ./yazi.nix ];
 
   programs = {
-    bat = {
-      enable = true;
-      config = { theme = "Dracula"; };
-    };
+    bat.enable = true;
     zoxide = {
       enable = true;
       enableFishIntegration = true;
