@@ -1,5 +1,6 @@
 {
   fonts = {
+    enableDefaultPackages = true;
     fontDir.enable = true;
     fontconfig = {
       antialias = true;

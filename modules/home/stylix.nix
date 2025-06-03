@@ -19,22 +19,10 @@
         pkgs.nerd-fonts.jetbrains-mono
         pkgs.nerd-fonts.symbols-only
       ];
-      serif = {
-        package = pkgs.nerd-fonts.fira-code;
-        name = "FiraCode Nerd Font";
-      };
-      sansSerif = {
-        package = pkgs.nerd-fonts.fira-code;
-        name = "FiraCode Nerd Font";
-      };
-      monospace = {
-        package = pkgs.nerd-fonts.fira-code;
-        name = "FiraCode Nerd Font Mono";
-      };
-      emoji = {
-        package = pkgs.noto-fonts-emoji;
-        name = "Noto Color Emoji";
-      };
+      serif.name = "FiraCode Nerd Font";
+      sansSerif.name = "FiraCode Nerd Font";
+      monospace.name = "FiraCode Nerd Font Mono";
+      emoji.name = "Noto Color Emoji";
     };
   };
 }
