@@ -1,4 +1,9 @@
 {
-  imports =
-    [ ./terminal/default.nix ./gtk.nix ./languages-env.nix ./gaming.nix ];
+  imports = [
+    ./terminal/default.nix
+    ./stylix.nix
+    ./gtk.nix
+    ./languages-env.nix
+    ./gaming.nix
+  ];
 }
