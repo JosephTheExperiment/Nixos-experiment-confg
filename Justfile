@@ -13,22 +13,20 @@ home-switch:
 
 system-switch: nixos-switch home-switch
 
-gc:
+gc commit-massage:
     #!/usr/bin/env bash
-    echo 'Enter commit massage:'
-    read commitMassage
     git add .
-    git commit -m "$commitMassage"
+    git commit -m "{{commit-massage}}"
 
 [confirm("Delete all nixos generations?")]
 nix-cg:
     sudo nix-collect-garbage -d
 
-[confirm("Want to update flake.look?")]
+[confirm("Wish to update flake.look?")]
 update-flake:
     nix flake update
 
-[confirm("Want to install all specified flatpak programs?")]
+[confirm("Wish to install all specified flatpak programs?")]
 flatpak-programs-install:
     bash ./scripts/flatpak.sh
 
