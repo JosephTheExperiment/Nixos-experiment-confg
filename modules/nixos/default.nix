@@ -1,3 +1,1 @@
-{
-  imports = [ ./monitor.nix ./fonts.nix ./greeter.nix ./packages-services.nix ];
-}
+{ imports = [ ./monitor.nix ./greeter.nix ./packages-services.nix ]; }
