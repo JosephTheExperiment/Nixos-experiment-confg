@@ -13,9 +13,9 @@
       antialias = true;
       enable = true;
       defaultFonts = {
-        serif = [ "FiraCode Nerd Font Regular" ];
-        sansSerif = [ "FiraCode Nerd Font Regular" ];
-        monospace = [ "FiraCode Nerd Font Mono Regular" ];
+        serif = [ "FiraCode Nerd Font" ];
+        sansSerif = [ "FiraCode Nerd Font" ];
+        monospace = [ "FiraCode Nerd Font Mono" ];
         emoji = [ "Noto Color Emoji" ];
       };
       hinting.autohint = true;

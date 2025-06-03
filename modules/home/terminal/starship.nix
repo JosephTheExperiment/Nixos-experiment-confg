@@ -3,7 +3,6 @@
     enable = true;
     enableFishIntegration = true;
     settings = {
-      os = { disabled = false; };
       sudo = {
         style = "bold green";
         symbol = "👑 ";
