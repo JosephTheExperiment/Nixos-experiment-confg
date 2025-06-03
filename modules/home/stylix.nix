@@ -9,6 +9,7 @@
     targets = {
       xfce.enable = false;
       gtk.enable = false;
+      kde.enable = false;
     };
     fonts.sizes.applications = 10;
   };
