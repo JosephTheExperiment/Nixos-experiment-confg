@@ -3,7 +3,7 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
     polarity = "dark";
-    stylix.image = ../../assets/nix-wallpaper-nineish.png;
+    image = ../../assets/nix-wallpaper-nineish.png;
     fonts = {
       serif = {
         package = pkgs.nerd-fonts.fira-code;
