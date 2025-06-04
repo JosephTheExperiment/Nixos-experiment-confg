@@ -8,17 +8,13 @@
       pkgs.nerd-fonts.fira-code
       pkgs.nerd-fonts.jetbrains-mono
       pkgs.nerd-fonts.symbols-only
+      pkgs.nerd-fonts.sauce-code-pro
     ];
     fontconfig = {
-      antialias = true;
       enable = true;
-      defaultFonts = {
-        serif = [ "FiraCode Nerd Font" ];
-        sansSerif = [ "FiraCode Nerd Font" ];
-        monospace = [ "FiraCode Nerd Font Mono" ];
-        emoji = [ "Noto Color Emoji" ];
-      };
-      hinting.autohint = true;
+      antialias = true;
+      cache32Bit = true;
+      defaultFonts = { emoji = [ "Noto Color Emoji" ]; };
       hinting.enable = true;
       hinting.style = "medium";
     };
