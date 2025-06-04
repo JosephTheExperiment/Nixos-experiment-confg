@@ -9,24 +9,13 @@
       gtk.enable = false;
       kde.enable = false;
     };
+    packages = [ pkgs.nerd-fonts.sauce-code-pro pkgs.noto-fonts-emoji ];
     fonts = {
       sizes.applications = 10;
-      serif = {
-        package = pkgs.nerd-fonts.sauce-code-pro;
-        name = "SauceCodePro Nerd Font";
-      };
-      sansSerif = {
-        package = pkgs.nerd-fonts.sauce-code-pro;
-        name = "SauceCodePro Nerd Font";
-      };
-      monospace = {
-        package = pkgs.nerd-fonts.sauce-code-pro;
-        name = "SauceCodePro Nerd Font Mono";
-      };
-      emoji = {
-        package = pkgs.noto-fonts-emoji;
-        name = "Noto Color Emoji";
-      };
+      serif.name = "SauceCodePro Nerd Font";
+      sansSerif.name = "SauceCodePro Nerd Font";
+      monospace.name = "SauceCodePro Nerd Font Mono";
+      emoji.name = "Noto Color Emoji";
     };
   };
 }
