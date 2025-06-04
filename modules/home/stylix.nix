@@ -9,8 +9,8 @@
       gtk.enable = false;
       kde.enable = false;
     };
-    packages = [ pkgs.nerd-fonts.sauce-code-pro pkgs.noto-fonts-emoji ];
     fonts = {
+      packages = [ pkgs.nerd-fonts.sauce-code-pro pkgs.noto-fonts-emoji ];
       sizes.applications = 10;
       serif.name = "SauceCodePro Nerd Font";
       sansSerif.name = "SauceCodePro Nerd Font";
