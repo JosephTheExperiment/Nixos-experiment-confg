@@ -10,18 +10,21 @@
       kde.enable = false;
     };
     fonts = {
-      sizes.applications = 10;
+      sizes = {
+        terminal = 13;
+        applications = 13;
+      };
       serif = {
-        name = "SauceCodePro Nerd Font";
-        package = pkgs.nerd-fonts.sauce-code-pro;
+        name = "FiraCode Nerd Font";
+        package = pkgs.nerd-fonts.fira-code;
       };
       sansSerif = {
-        name = "SauceCodePro Nerd Font";
-        package = pkgs.nerd-fonts.sauce-code-pro;
+        name = "FiraCode Nerd Font";
+        package = pkgs.nerd-fonts.fira-code;
       };
       monospace = {
-        name = "SauceCodePro Nerd Font Mono";
-        package = pkgs.nerd-fonts.sauce-code-pro;
+        name = "FiraCode Nerd Font Mono";
+        package = pkgs.nerd-fonts.fira-code;
       };
       emoji = {
         name = "Noto Color Emoji";
