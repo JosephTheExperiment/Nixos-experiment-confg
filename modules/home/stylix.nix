@@ -11,8 +11,8 @@
     };
     fonts = {
       sizes = {
-        terminal = 13;
-        applications = 13;
+        terminal = 11;
+        applications = 11;
       };
       serif = {
         name = "FiraCode Nerd Font";
