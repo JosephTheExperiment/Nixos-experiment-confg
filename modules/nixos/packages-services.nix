@@ -2,7 +2,7 @@
   # System wide packages
   environment.systemPackages = [
     pkgs.uutils-coreutils-noprefix
-    pkgs.file-roller
+    pkgs.p7zip
     pkgs.home-manager
 
     # Xfce4 plugins
