@@ -130,13 +130,7 @@
     }
 
      on_force_close "quit"
-
      default_mode "locked"
-
-     mouse_mode false
-
-     scroll_buffer_size 10000
-
      copy_clipboard "primary"
      copy_on_select false
   '';
