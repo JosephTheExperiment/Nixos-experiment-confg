@@ -131,8 +131,6 @@
 
      on_force_close "quit"
 
-     auto_layout true
-
      default_mode "locked"
 
      mouse_mode false
