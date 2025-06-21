@@ -4,6 +4,7 @@
     shellAliases = {
       nixos-switch = "sudo nixos-rebuild switch --flake .";
       home-switch = "home-manager switch --flake .";
+      pup = "protonup -d ~/.config/heroic/tools/proton";
     };
     plugins = [{
       name = "plugin-git";
