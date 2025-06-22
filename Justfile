@@ -26,8 +26,8 @@ update-flake:
 flatpak-programs-install:
     bash ./scripts/flatpak.sh
 
-language-env-install:
-    bash ./scripts/language-env.sh
+software-install:
+    bash ./scripts/software.sh
 
 [confirm("Install the full configuration for the system?!!")]
-full-config-install: system-switch flatpak-programs-install language-env-install
+full-config-install: system-switch flatpak-programs-install software-install
