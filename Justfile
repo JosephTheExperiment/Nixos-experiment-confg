@@ -19,7 +19,7 @@ gc commit-massage:
 nix-cg:
     sudo nix-collect-garbage -d
 
-[confirm("Wish to update flake.look?")]
+[confirm("Wish to update flake.lock?")]
 update-flake:
     nix flake update
 
