@@ -4,7 +4,12 @@
     package = pkgs.evil-helix;
     defaultEditor = true;
     settings = {
+      file-picker.hidden = false;
       editor = {
+        indent-guides = {
+          render = true;
+          character = "│";
+        };
         cursor-shape = {
           insert = "bar";
           normal = "block";
@@ -18,28 +23,31 @@
           };
         };
       };
-      keys.insert = { j = { j = "normal_mode"; }; };
+      keys = {
+        insert = { A-j = "normal_mode"; };
+        select = { A-j = "normal_mode"; };
+      };
     };
     languages = {
       language-server.rust-analyzer.config = { check.command = "clippy"; };
-      language = [
-        {
-          name = "nix";
-          auto-format = true;
-        }
-        {
-          name = "rust";
-          auto-format = true;
-        }
-        {
-          name = "cpp";
-          auto-format = true;
-        }
-        {
-          name = "c";
-          auto-format = true;
-        }
-      ];
+      language = {
+        rust.indent = {
+          tab-width = 2;
+          unit = " ";
+        };
+        nix.indent = {
+          tab-width = 2;
+          unit = " ";
+        };
+        cpp.indent = {
+          tab-width = 2;
+          unit = " ";
+        };
+        c.indent = {
+          tab-width = 2;
+          unit = " ";
+        };
+      };
     };
   };
 }
