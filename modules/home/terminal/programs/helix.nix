@@ -3,7 +3,16 @@
     enable = true;
     package = pkgs.evil-helix;
     defaultEditor = true;
-    settings = { keys.insert = { "A-q" = "normal_mode"; }; };
+    settings = {
+      editor.auto-save = {
+        focus-lost = true;
+        after-delay = {
+          enable = true;
+          timeout = 2500;
+        };
+      };
+      keys.insert = { "A-q" = "normal_mode"; };
+    };
     languages = {
       language-server.rust-analyzer.config = { check.command = "clippy"; };
       language = [
