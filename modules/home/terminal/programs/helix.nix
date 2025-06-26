@@ -30,24 +30,36 @@
     };
     languages = {
       language-server.rust-analyzer.config = { check.command = "clippy"; };
-      language = {
-        rust.indent = {
-          tab-width = 2;
-          unit = " ";
-        };
-        nix.indent = {
-          tab-width = 2;
-          unit = " ";
-        };
-        cpp.indent = {
-          tab-width = 2;
-          unit = " ";
-        };
-        c.indent = {
-          tab-width = 2;
-          unit = " ";
-        };
-      };
+      language = [
+        {
+          name = "rust";
+          indent = {
+            tab-width = 2;
+            unit = " ";
+          };
+        }
+        {
+          name = "cpp";
+          indent = {
+            tab-width = 2;
+            unit = " ";
+          };
+        }
+        {
+          name = "c";
+          indent = {
+            tab-width = 2;
+            unit = " ";
+          };
+        }
+        {
+          name = "nix";
+          indent = {
+            tab-width = 2;
+            unit = " ";
+          };
+        }
+      ];
     };
   };
 }
