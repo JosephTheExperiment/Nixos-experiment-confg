@@ -4,14 +4,21 @@
     package = pkgs.evil-helix;
     defaultEditor = true;
     settings = {
-      editor.auto-save = {
-        focus-lost = true;
-        after-delay = {
-          enable = true;
-          timeout = 2500;
+      editor = {
+        cursor-shape = {
+          insert = "bar";
+          normal = "block";
+          select = "underline";
+        };
+        auto-save = {
+          focus-lost = true;
+          after-delay = {
+            enable = true;
+            timeout = 2500;
+          };
         };
       };
-      keys.insert = { "A-q" = "normal_mode"; };
+      keys.insert = { j = { j = "normal_mode"; }; };
     };
     languages = {
       language-server.rust-analyzer.config = { check.command = "clippy"; };
