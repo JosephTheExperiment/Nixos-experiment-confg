@@ -4,8 +4,8 @@
     package = pkgs.evil-helix;
     defaultEditor = true;
     settings = {
-      file-picker.hidden = false;
       editor = {
+        file-picker.hidden = false;
         indent-guides = {
           render = true;
           character = "│";
