@@ -30,36 +30,6 @@
     };
     languages = {
       language-server.rust-analyzer.config = { check.command = "clippy"; };
-      language = [
-        {
-          name = "rust";
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-        }
-        {
-          name = "cpp";
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-        }
-        {
-          name = "c";
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-        }
-        {
-          name = "nix";
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-        }
-      ];
     };
   };
 }
