@@ -19,13 +19,19 @@
           focus-lost = true;
           after-delay = {
             enable = true;
-            timeout = 2500;
+            timeout = 3000;
           };
         };
       };
       keys = {
-        insert = { A-j = "normal_mode"; };
-        select = { A-j = "normal_mode"; };
+        insert = {
+          C.n = "normal_mode";
+          C.j = "move_visual_line_down";
+          C.k = "move_visual_line_up";
+          C.h = "move_char_left";
+          C.l = "move_char_right";
+        };
+        select = { "C.n" = "normal_mode"; };
       };
     };
     languages = {
