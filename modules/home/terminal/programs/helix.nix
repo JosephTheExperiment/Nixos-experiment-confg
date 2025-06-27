@@ -25,13 +25,13 @@
       };
       keys = {
         insert = {
-          C-n = "normal_mode";
-          C-j = "move_visual_line_down";
-          C-k = "move_visual_line_up";
-          C-h = "move_char_left";
-          C-l = "move_char_right";
+          A-n = "normal_mode";
+          A-j = "move_visual_line_down";
+          A-k = "move_visual_line_up";
+          A-h = "move_char_left";
+          A-l = "move_char_right";
         };
-        select = { "C-n" = "normal_mode"; };
+        select = { "A-n" = "normal_mode"; };
       };
     };
     languages = {
