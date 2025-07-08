@@ -4,11 +4,21 @@
     shellAliases = {
       nixos-switch = "sudo nixos-rebuild switch --flake .";
       home-switch = "home-manager switch --flake .";
-      pup = "protonup -d ~/.config/heroic/tools/proton";
+      gaa-gca = "git add . && git commit -a -m";
     };
-    plugins = [{
-      name = "plugin-git";
-      src = pkgs.fishPlugins.plugin-git.src;
-    }];
+    plugins = [
+      {
+        name = "plugin-git";
+        src = pkgs.fishPlugins.plugin-git.src;
+      }
+      {
+        name = "fishplugin-autopair";
+        src = pkgs.fishPlugins.autopair.src;
+      }
+      {
+        name = "fishplugin-plugin-sudope";
+        src = pkgs.fishPlugins.plugin-sudope.src;
+      }
+    ];
   };
 }
