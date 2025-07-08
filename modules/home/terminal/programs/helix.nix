@@ -26,8 +26,7 @@
       keys = {
         normal = { A-w = ":wa"; };
         insert = {
-          A-n = [":wa" "normal_mode"];
-          esc = [":wa" "normal_mode"];
+          A-n = "normal_mode";
           A-j = "move_visual_line_down";
           A-k = "move_visual_line_up";
           A-h = "move_char_left";

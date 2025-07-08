@@ -18,6 +18,7 @@ gc commit-massage:
 [confirm("Delete all nixos generations?")]
 nix-cg:
     sudo nix-collect-garbage -d
+    just nixos-switch
 
 [confirm("Wish to update flake.lock?")]
 update-flake:
