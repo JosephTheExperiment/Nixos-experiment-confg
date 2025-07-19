@@ -2,7 +2,7 @@
 
 { 
   # Change caps lock to esc key
-  services.xserver.xkbOptions = "caps:escape";
+  services.xserver.xkb.options = "caps:escape";
 
   # Set video resolution
   services.xserver.extraConfig = ''
