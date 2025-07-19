@@ -1,6 +1,9 @@
 { ... }:
 
 { 
+  # Change caps lock to esc key
+  services.xserver.xkbOptions = "caps:escape";
+
   # Set video resolution
   services.xserver.extraConfig = ''
     Section "Monitor"
