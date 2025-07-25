@@ -31,9 +31,7 @@
           A-h = "move_char_left";
           A-l = "move_char_right";
           A-w = ":wa";
-          esc = ["normal_mode" ":w"];
         };
-        select = { esc = ["normal_mode" ":w"]; };
       };
     };
     languages = {
