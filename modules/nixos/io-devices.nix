@@ -4,13 +4,4 @@
   # THIS FILE NEEDS TO BE CHANGED WHEN USING WAYLAND
   # Change caps lock to esc key
   services.xserver.xkb.options = "caps:escape";
-
-  # Set video resolution
-  services.xserver.extraConfig = ''
-    Section "Monitor"
-        Identifier "VGA-0"
-        Modeline "1600x900_60.00"  118.25  1600 1696 1856 2112  900 903 908 934 -hsync +vsync
-        Option "PreferredMode" "1600x900_60.00"
-    EndSection
-  '';
 }
