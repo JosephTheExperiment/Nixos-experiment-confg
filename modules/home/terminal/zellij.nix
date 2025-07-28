@@ -1,12 +1,13 @@
-{ pkgs, ... }: {
+{ pkgs, pkgs-unstable, ... }: {
   programs.zellij = {
     enable = true;
     enableFishIntegration = true;
     exitShellOnExit = true;
   };
+
   xdg.configFile."zellij/config.kdl".text = ''
     default_shell "fish"
-    scrollback_editor "${pkgs.evil-helix}/bin/hx"
+    scrollback_editor "${pkgs-unstable.helix}/bin/hx"
     show_startup_tips false
     on_force_close "quit"
     copy_on_select false

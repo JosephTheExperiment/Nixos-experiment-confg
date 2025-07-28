@@ -1,11 +1,20 @@
-{ pkgs, ... }: {
+{ pkgs, pkgs-unstable, ... }: {
   programs.helix = {
     enable = true;
-    package = pkgs.evil-helix;
+    package = pkgs-unstable.helix;
     defaultEditor = true;
     settings = {
       editor = {
         file-picker.hidden = false;
+        mouse = false;
+        cursorline = true;
+        color-modes = true;
+        completion-replace = true;
+        completion-timeout = 100;
+        end-of-line-diagnostics = "hint";
+        inline-diagnostics = {
+          cursor-line = "warning";
+        };
         indent-guides = {
           render = true;
           character = "│";
