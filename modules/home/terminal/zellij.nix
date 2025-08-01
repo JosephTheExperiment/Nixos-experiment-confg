@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }: {
+{ pkgs-unstable, ... }: {
   programs.zellij = {
     enable = true;
     enableFishIntegration = true;
@@ -7,6 +7,7 @@
 
   xdg.configFile."zellij/config.kdl".text = ''
     default_shell "fish"
+    mouse_mode false
     scrollback_editor "${pkgs-unstable.helix}/bin/hx"
     show_startup_tips false
     on_force_close "quit"
