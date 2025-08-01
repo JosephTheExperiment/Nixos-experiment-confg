@@ -3,6 +3,12 @@
     # Rust
     pkgs.rustup
 
+    # Haskell
+    pkgs.ghc
+    pkgs.haskell-language-server
+    pkgs.cabal-install
+    pkgs.stack
+
     # C/C++
     pkgs.cmake
     pkgs.conan
