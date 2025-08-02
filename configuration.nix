@@ -1,4 +1,4 @@
-{ pc, lib, pkgs, pkgs-unstable, ... }: {
+{ pc, pkgs, ... }: {
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -21,7 +21,7 @@
     enable = true;
     displayManager.lightdm.enable = true;
     desktopManager.xfce.enable = true;
-    videoDrivers = [ "ati" "amdgpu" ];
+    videoDrivers = [ "amdgpu" ];
   };
 
   # Configure keymap in X11
