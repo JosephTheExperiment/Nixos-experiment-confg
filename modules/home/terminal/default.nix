@@ -1,6 +1,6 @@
 {
   imports = [
-    ./ghostty.nix
+    ./alacritty.nix
     ./fish.nix
     ./zellij.nix
     ./starship.nix
