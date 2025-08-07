@@ -24,6 +24,9 @@ nix-cg:
 update-flake:
     nix flake update
 
+update-system: update-flake system-switch
+    flatpak update -y
+
 flatpak-programs-install:
     bash ./scripts/flatpak.sh
 
