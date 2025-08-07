@@ -3,7 +3,8 @@
     enableFishIntegration = true;
     enable = true;
     settings = {
-      font-size = 11;
+      fullscreen = true;
+      font-size = 10;
       font-family = "FiraCode Nerd Font Mono";
     };
   };
